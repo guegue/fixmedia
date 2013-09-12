@@ -22,7 +22,7 @@
       <p><label class="label"><? _e('Contraseña'); ?>:</label>
         <?php echo form_input($password);?>
       </p>
-      <p><?php echo form_submit('submit', "<? _e('Registrarse'); ?>", 'class="submit button"');?></p>
+      <p><?php echo form_submit('submit', 'Registrarse', 'class="submit button"');?></p>
     <?php echo form_close();?>
     <div class="outer_box"><? _e('¿Ya tienes cuenta?'); ?> <a href="<?= site_url($this->router->reverseRoute('login')); ?>"><? _e('Inicia sesión'); ?></a></div>
   </div>

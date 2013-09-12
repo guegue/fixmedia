@@ -1,4 +1,4 @@
-<?
+<?php
 class MY_Controller extends CI_Controller {
     protected $the_user;
     protected $logged_in;
@@ -6,6 +6,7 @@ class MY_Controller extends CI_Controller {
     public function __construct() {
 
         parent::__construct();
+        $data = new stdClass();
         $data->logged_in=false;
         $this->logged_in=false;
         if($this->ion_auth->logged_in()) {
