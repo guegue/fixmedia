@@ -26,11 +26,11 @@
 			<aside class="indicators-explanation"><? _e('Las cifras globales de Fixmeda desde el día de su lanzamiento'); ?></aside>
 		</div>
 		<div class="block-wrap clearfix">
-			<h1 class="title"><? _e('Fuentes'); ?></h2>
-			<p class="sub_title sep"><? _e('Las fuentes más importantes en Fixmedia en los últimos 7 días'); ?></p>
+			<h1 class="title"><? _e('Medios'); ?></h2>
+			<p class="sub_title sep"><? _e('Las fuentes más importantes en RE:media en los últimos 7 días'); ?></p>
 			<section id="chart_1" class="chart_full"></section>
 			<aside class="chart-explanation top">
-				<p class="cex_text"><? _e('Cada globo representa una fuente (un medio, un blog, etc.). Cuanto más alineado esté a la derecha, es que ha recibido más reportes. Cuanto más arriba esté, es que ha recibido más fixes. Cuanto mayor sea el tamaño del globo, es que tiene el total de noticias tienen más importancia dentro de Fixmedia.'); ?></p>
+				<p class="cex_text"><? _e('Cada globo representa una fuente (un medio, un blog, etc.). Cuanto más alineado esté a la derecha, es que ha recibido más reportes. Cuanto más arriba esté, es que ha recibido más fixes. Cuanto mayor sea el tamaño del globo, es que tiene el total de noticias tienen más importancia dentro de RE:media.'); ?></p>
 			</aside>
 		</div>
 		<div class="block-wrap clearfix">

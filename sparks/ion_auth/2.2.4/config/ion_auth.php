@@ -77,12 +77,12 @@
 	/**
 	 * Site Title, example.com
 	 */
-	$config['site_title']		   = "Fixmedia.org";
+	$config['site_title']		   = "Remedia.la";
 	
 	/**
 	 * Admin Email, admin@example.com
 	 */
-	$config['admin_email']		   = "no-reply@fixmedia.org";
+	$config['admin_email']		   = "no-reply@remedia.la";
 	
 	/**
 	 * Default group, use name

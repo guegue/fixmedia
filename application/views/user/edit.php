@@ -33,7 +33,7 @@
 				</div>
 				<div class="row opt_checkbox">
 					<?php echo form_checkbox('allow_mention_twitter', '1', $user->allow_mention_twitter, 'id="allow_mention_twitter"');?>
-     				<label for="allow_mention_twitter"><? _e('Permitir que se me mencione en twitter al compartir mis envíos a Fixmedia'); ?></label>
+     				<label for="allow_mention_twitter"><? _e('Permitir que se me mencione en twitter al compartir mis envíos a RE:media'); ?></label>
 				</div>
 				<div class="row wrap_title">
 					<label class="label" for="notifications"><? _e('Notificaciones'); ?> <span class="tip"><? _e('Selecciona cuándo quieres recibir notificaciones en tu correo electrónico'); ?></span></label>

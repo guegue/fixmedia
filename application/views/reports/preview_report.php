@@ -32,7 +32,7 @@
 						<div class="subreport_content">
 							<?=$report['content'][$index];?>
 							<? if (count(array_filter($report['urls_decode'][$index]))>0) : ?>
-								<h4 class="subreport_urls"><? _e('Fuentes'); ?>:</h4>
+								<h4 class="subreport_urls"><? _e('Medios'); ?>:</h4>
 								<? foreach($report['urls_decode'][$index] as $url) : ?>
 								<a href="<?=$url?>" target="_blank" class="source"><?=$url; ?></a>
 								<? endforeach; ?>
@@ -63,11 +63,11 @@
 		<div class="counter">
 			<span class="count count-vote-<?= $report_sent->id ?>"><?= $report_sent->votes_count ?></span>
 			<? if ($report_sent->votes_count==1 && ($logged_in && $report_sent->is_voted($the_user->id))) : ?>
-			<? _e('persona (tú) quiere que alguien la arregle'); ?>
+			<? _e('persona (tú) quiere que alguien la re:medie'); ?>
 			<? elseif ($report_sent->votes_count==1) :?>
-			<? _e('persona quiere que alguien la arregle'); ?>
+			<? _e('persona quiere que alguien la re:medie'); ?>
 			<? else : ?>
-			<? _e('personas quieren que alguien la arregle'); ?>
+			<? _e('personas quieren que alguien la re:medie'); ?>
 			<? endif; ?>
 		</div>
 	</aside>

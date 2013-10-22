@@ -29,11 +29,11 @@
 		<div class="counter">
 			<span class="count count-vote-<?= $report->id ?>"><?= $report->votes_count ?></span>
 			<? if ($report->votes_count==1 && ($logged_in && $report->is_voted($the_user->id))) : ?>
-			<? _e('persona (tú) quiere que alguien la arregle'); ?>
+			<? _e('persona (tú) quiere que alguien la re:medie'); ?>
 			<? elseif ($report->votes_count==1) :?>
-			<? _e('persona quiere que alguien la arregle'); ?>
+			<? _e('persona quiere que alguien la re:medie'); ?>
 			<? else : ?>
-			<? _e('personas  quieren que alguien la arregle'); ?>
+			<? _e('personas  quieren que alguien la re:medie'); ?>
 			<? endif; ?>
 		</div>
 	</aside>

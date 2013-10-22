@@ -4,7 +4,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <link href='http://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>
     <meta name="viewport" content="width=1024" />
-	<title>Administración - Fixmedia</title>
+	<title>Administración - RE:media</title>
     <link rel="shortcut icon" href="<?php echo base_url(); ?>/images/favicon.png">
     <meta name="description" content="<?= isset($description) ? $description : ''; ?>" />
     <meta name="keywords" content="" />

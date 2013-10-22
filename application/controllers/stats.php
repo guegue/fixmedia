@@ -22,7 +22,7 @@ class Stats extends MY_Controller {
 										WHERE r.created_at > date_sub(now(), interval 7 day)
 										GROUP BY r.site ORDER BY r.votos DESC LIMIT 0,10");
 
-			/* Noticias en Fixmedia (fixes totales) En un número, sin gráfico */
+			/* Noticias en RE:media (fixes totales) En un número, sin gráfico */
 			$data['total_fixes'] = count(Vote::find_all_by_vote_type('FIX'));
 			$data['total_news'] = count(Report::all());
 			$data['total_users'] = count(User::all());
@@ -38,7 +38,7 @@ class Stats extends MY_Controller {
 			/* Gráfico línea temporal de fixes por días y por fuente (las 3 en cabeza en cada momento)
 
 			Reportes:
-			/* Reportes en Fixmedia. En un número, sin gráfico*/
+			/* Reportes en RE:media. En un número, sin gráfico*/
 			$data['total_reports'] = count(Reports_data::all());
 			/*Gráfico linea temporal de reportes totales por días */
 			$data['reports_by_days'] = Reports_data::find_by_sql("SELECT COUNT(id) as total, DATE_FORMAT(created_at, '%d/%m') as fecha

@@ -1,7 +1,7 @@
 	<section class="block">
-		<h3 class="title"><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('que-es-fixmedia')))); ?>"><? _e('¿Qué es fixmedia.org?'); ?></a></h3>
+		<h3 class="title"><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('que-es-remedia')))); ?>"><? _e('¿Qué es remedia.la?'); ?></a></h3>
 		<div class="side_text">
-			<p><? _e('Fixmedia es una herramienta que nos permite mejorar las noticias entre todos, pidiendo que alguien las arregle añadiendo más y mejor información o corrigiendo la existente.'); ?> </p>
+			<p><? _e('RE:media es una herramienta que nos permite mejorar las noticias entre todos, pidiendo que alguien las arregle añadiendo más y mejor información o corrigiendo la existente.'); ?> </p>
 		</div>
 	</section>
 	<section class="block">
@@ -20,7 +20,7 @@
 		<h3 class="title"><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('equipo')))); ?>"><? _e('¿Quiénes?'); ?></a></h3>
 		<div class="side_text">
 			<p>
-				<? _e('Fixmedia la conforman los usuarios de la herramienta, cada uno de los <a href="http://www.goteo.org/project/fixmedia.org-mejora-las-noticias/supporters" target="_blank">170 cofinanciadores</a> del proyecto, las decenas de personas que nos ayudaron y el equipo de <a href="http://nxtmdia.com" target="_blank">Nxtmdia</a>.'); ?>
+				<? _e('RE:media la conforman los usuarios de la herramienta, cada uno de los <a href="http://www.goteo.org/project/remedia.la-mejora-las-noticias/supporters" target="_blank">170 cofinanciadores</a> del proyecto, las decenas de personas que nos ayudaron y el equipo de <a href="http://nxtmdia.com" target="_blank">Nxtmdia</a>.'); ?>
 			</p>
 		</div>
 	</section>

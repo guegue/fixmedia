@@ -2,7 +2,7 @@
 	<section class="logos-footer <?= is_cur_page($this, 'auth','create_user') ? 'create_user' : ''; ?> <?= is_cur_page($this, 'auth','forgot_password') ? 'forgot' : ''; ?>">
 		<div class="wrap clearfix">
 			<div class="develop">
-				<h3 class="title"><? _e('Desarrollado por'); ?>:</h3>
+				<h3 class="title"><? _e('Reutilizamos el software desarrollado por'); ?>:</h3>
 				<a href="http://nxtmdia.com"><img alt="Nxtmdia" src="<?= base_url('images/logos/logo-nxtmdia.jpg'); ?>"/></a>
 			</div>
 			<div class="cofin">

@@ -13,6 +13,6 @@
 		<p class="source"><? _e('Fuente'); ?>: <a href="<?= site_url($this->router->reverseRoute('source-profile', array('sitename' => $report->site))); ?>"><?= $report->site; ?></a></p>
 	</div>
 	<? if ($logged_in && $report->is_removable($the_user->id)) : ?>
-		<p class="remove-report"><? _e('Esta noticia la has enviado tú y todavía puedes eliminarla.'); ?> <a href="<?= site_url('reports/delete/' . $report->id); ?>"><? _e('Eliminar noticia'); ?></a></p>
+		<p class="remove-report"><? _e('Esta noticia la has reportado tú y todavía puedes eliminarla.'); ?> <a href="<?= site_url('reports/delete/' . $report->id); ?>"><? _e('Eliminar noticia'); ?></a></p>
 	<? endif; ?>
 </section>

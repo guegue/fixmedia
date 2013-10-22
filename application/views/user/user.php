@@ -57,7 +57,7 @@
 					}
 					function fixes_by_sources() {
 						var data = google.visualization.arrayToDataTable([
-						  	['<? _e('Fuentes'); ?>', '<? _e('Fixes'); ?>'],
+						  	['<? _e('Medios'); ?>', '<? _e('Fixes'); ?>'],
 						 	<? foreach ($fixes_by_sites as $site) :?>
 								[<?= "'". $site->site ."'";?>, <?=$site->fixes?>],
 							<? endforeach; ?>

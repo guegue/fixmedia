@@ -48,7 +48,7 @@
 						<div class="subreport_content">
 							<?=$subreport->content;?>
 							<? if (count(array_filter($subreport->urls))>0) : ?>
-								<h4 class="subreport_urls">Fuentes:</h4>
+								<h4 class="subreport_urls">Medios:</h4>
 								<? foreach($subreport->urls as $url) : ?>
 								<a href="<?=$url?>" target="_blank" class="source"><?=$url; ?></a>
 								<? endforeach; ?>
@@ -93,11 +93,11 @@
 			<div class="wrap-counter">
 				<span class="count count-vote-<?= $report->id ?>"><?= $report->votes_count ?></span>
 				<? if ($report->votes_count==1 && ($logged_in && $report->is_voted($the_user->id))) : ?>
-				persona (tu) quiere que alguien la arregle
+				persona (tú) quiere que alguien la re:medie
 				<? elseif ($report->votes_count==1) :?>
-				persona quiere que alguien la arregle. ¿Y tú?
+				persona quiere que alguien la re:medie. ¿Y tú?
 				<? else : ?>
-				personas quieren que alguien la arregle. ¿Y tú?
+				personas quieren que alguien la re:medie. ¿Y tú?
 				<? endif; ?>
 			</div>
 			<div class="wrap-fix">

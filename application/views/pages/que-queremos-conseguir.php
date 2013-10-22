@@ -9,12 +9,12 @@
 		</div>
 		<h2 class="toggle">Neutralidad, independencia</h2>
 		<div class="wrap-title sep">
-			<p>Fixmedia se dirige a todos aquellos que consideran que la construcción de la opinión pública debe hacerse con la participación abierta de todos los individuos de la sociedad, máxime en un contexto tecnológico que nos permite tratar las noticias como ‘procesos’ en lugar de como ‘productos’. </p>
-			<p>Fixmedia es simplemente una herramienta neutra que permite a cualquier ciudadano hackear la cadena de valor de las noticias para abrirlas al escrutinio público y favorecer así la construcción de una agenda pública más participada y contrastada directamente por la sociedad, sin más intermediación que los argumentos en una discusión pública y abierta.</p>
+			<p>RE:media se dirige a todos aquellos que consideran que la construcción de la opinión pública debe hacerse con la participación abierta de todos los individuos de la sociedad, máxime en un contexto tecnológico que nos permite tratar las noticias como ‘procesos’ en lugar de como ‘productos’. </p>
+			<p>RE:media es simplemente una herramienta neutra que permite a cualquier ciudadano hackear la cadena de valor de las noticias para abrirlas al escrutinio público y favorecer así la construcción de una agenda pública más participada y contrastada directamente por la sociedad, sin más intermediación que los argumentos en una discusión pública y abierta.</p>
 		</div>
 		<h2 class="toggle">Sin ánimo de lucro</h2>
 		<div class="wrap-title sep">             
-		<p>Fixmedia como proyecto no tiene la meta de generar lucro económico, ni para los ciudadanos que financiaron el proyecto, ni para Nxtmdia, la empresa social que desarrolla y gestiona la herramienta. Pero hablamos de esto en ‘Qué queremos conseguir’ porque Fixmedia sí aspira a ser autosostenible económicamente. Es la única manera de existir sin renunciar a la neutralidad de la herramienta y la independencia del equipo.</p> 
+		<p>RE:media como proyecto no tiene la meta de generar lucro económico, ni para los ciudadanos que financiaron el proyecto, ni para Nxtmdia, la empresa social que desarrolla y gestiona la herramienta. Pero hablamos de esto en ‘Qué queremos conseguir’ porque RE:media sí aspira a ser autosostenible económicamente. Es la única manera de existir sin renunciar a la neutralidad de la herramienta y la independencia del equipo.</p> 
 		</div>
 		
 	<p class="nav">Ir a... ‘<a href="<?= site_url($this->router->reverseRoute('statics', array('page' => 'cofinanciadores'))); ?>">Cofinanciadores</a>’ o a la ‘<a href="<?= site_url($this->router->reverseRoute('statics', array('page' => 'como-funciona'))); ?>">FAQ</a>’</p>

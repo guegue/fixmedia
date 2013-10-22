@@ -4,7 +4,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <link href='http://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>
     <meta name="viewport" content="width=1024" />
-	<title>Se ha producido un error - Fixmedia</title>
+	<title>Se ha producido un error - RE:media</title>
     <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -43,7 +43,7 @@
 		margin:10px 0;
 		cursor:pointer;
 		position:relative;
-		background: url('http://www.fixmedia.org/images/icons-button.png') left -330px no-repeat;
+		background: url('http://www.remedia.la/images/icons-button.png') left -330px no-repeat;
 		width: 150px;
 		margin:20px auto;
 		text-align:center;
@@ -54,9 +54,9 @@
 </head>
 <body>
 	<div class="error_wrapper">
-		<p><img class="logo" src="http://www.fixmedia.org/images/errors/error_logo_fixmedia.png" alt="Fixmedia.org" title="Fixmedia.org" /></p>
-		<p><img class="logo" src="http://www.fixmedia.org/images/errors/500.png" alt="Se ha producido un error" title="Se ha producido un error" /></p>
-		<a href="http://fixmedia.com" class="button">Vuelve a fixmedia</a>
+		<p><img class="logo" src="http://www.remedia.la/images/errors/error_logo_remedia.png" alt="Remedia.la" title="Remedia.la" /></p>
+		<p><img class="logo" src="http://www.remedia.la/images/errors/500.png" alt="Se ha producido un error" title="Se ha producido un error" /></p>
+		<a href="http://remedia.com" class="button">Vuelve a Re:media</a>
 	</div>
 </body>
 </html>

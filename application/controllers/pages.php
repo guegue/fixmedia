@@ -11,7 +11,7 @@ class Pages extends MY_Controller {
 		$titles = array( 'quienes-somos' =>  'Quiénes somos',
 						'que-hacemos' => 'Qué hacemos',
 						'faq' => 'Preguntas más frecuentes (FAQ)',
-						'que-es-fixmedia' =>  '¿Qué es Fixmedia?',
+						'que-es-remedia' =>  '¿Qué es RE:media?',
 						'como-funciona' => '¿Cómo funciona?',
 						'que-queremos-conseguir' => '¿Qué queremos conseguir?',
 						'cofinanciadores' => 'Cofinanciadores',
@@ -20,13 +20,13 @@ class Pages extends MY_Controller {
 						'marcador' => 'Usa nuestro marcador',
 						'periodistas' => '¿Eres perdiodista?',
 						'creadores' => '¿Creas contenido?',
-						'top-usuarios' => 'Top fuentes',
-						'top-fuentes' => 'Top usuarios',
+						'top-usuarios' => 'Top medios',
+						'top-fuentes' => 'Top re:mediantes',
 						'estadisticas' => 'Estadísticas',
 						'problemas' => '¿Problemas?',
 						'aviso-legal' => 'Información legal y condiciones de uso',
-						'botones' => 'Botones de Fixmedia en tu web o blog',
-						'what-is-fixmedia' => 'What is Fixmedia?',
+						'botones' => 'Botones de RE:media en tu web o blog',
+						'what-is-remedia' => 'What is RE:media?',
 						);
 		$data = array();
 		$data = get_sidebars_blocks($data);

@@ -1,4 +1,6 @@
 database.php
+config.php
+application/config/config.php
 application/config/database.php
 application/cache/*
 images/sources/*

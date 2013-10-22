@@ -2,7 +2,7 @@
 	<div id="content">
 		<h1 class="title">¿Problemas?</h1>
 		<p class="sub_title sep">Esperamos tus sabios comentarios</p>
-		<p>Si tienes problemas técnicos usando Fixmedia o deseas aportarnos tu valiosa opinión o feedback tras haber detectado algún error de programación o diseño, o simplemente crees que hay partes que podríamos haber hecho mejor...</p>
+		<p>Si tienes problemas técnicos usando RE:media o deseas aportarnos tu valiosa opinión o feedback tras haber detectado algún error de programación o diseño, o simplemente crees que hay partes que podríamos haber hecho mejor...</p>
 
 		<p>Por favor, no dudes en escribirnos:</p>
 

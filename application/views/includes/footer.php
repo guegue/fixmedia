@@ -2,8 +2,8 @@
 	<section class="main-footer">
 		<div class="wrap clearfix">
 			<div class="block">
-				<p class="logo">Fixmedia.org</p>
-				<p><? _e('fixmedia.org es un proyecto de <a href="http://nxtmdia.com" target="_blank">NXTMDIA</a> para el procomún financiado a través de <a href="http://goteo.org" target="_blank">Goteo.org</a> por <a href="http://www.goteo.org/project/fixmedia.org-mejora-las-noticias/supporters" target="_blank">estas personas.</a>'); ?></p>
+				<p class="logo">Remedia.la</p>
+				<p><? _e('Re:media es una plataforma latinoamericana para la edición colaborativa de noticias, un proyecto de <a href="http://guegue.com" target="_blank\">GüeGüe Comunicaciones</a>'); ?></p>
 			</div>
 
 			<nav class="clearfix menus">
@@ -13,8 +13,8 @@
 					<li><a href="<?= site_url(); ?>"><? _e('Más urgentes'); ?></a></li>
 					<li><a href="<?= site_url($this->router->reverseRoute('home-pending')); ?>"><? _e('Pendientes'); ?></a></li>
 					<li><a href="<?= site_url($this->router->reverseRoute('home-recents')); ?>"><? _e('Recientes'); ?></a></li>
-					<li><a href="<?= site_url($this->router->reverseRoute('users')); ?>"><? _e('Top usuarios'); ?></a></li>
-					<li><a href="<?= site_url($this->router->reverseRoute('sources')); ?>"><? _e('Top fuentes'); ?></a></li>
+					<li><a href="<?= site_url($this->router->reverseRoute('users')); ?>"><? _e('Top re:mediantes'); ?></a></li>
+					<li><a href="<?= site_url($this->router->reverseRoute('sources')); ?>"><? _e('Top medios'); ?></a></li>
 					<li><a href="<?= site_url($this->router->reverseRoute('stats')); ?>"><? _e('Estadísticas'); ?></a></li>
 				</ul>
 				<ul class="menu">
@@ -24,11 +24,11 @@
 					<li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('marcador')))); ?>"><? _e('Usa nuestro marcador'); ?></a></li>
 					<li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('periodistas')))); ?>"><? _e('¿Eres periodista?'); ?></a></li>
 					<li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('creadores')))); ?>"><? _e('¿Creas contenido?'); ?></a></li>
-					<li><a href="http://fixmedia.org/blog"><? _e('Blog'); ?></a></li>
+					<li><a href="http://remedia.la/blog"><? _e('Blog'); ?></a></li>
 				</ul>
 				<ul class="menu">
 					<li class="name">Manual</li>
-					<li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('que-es-fixmedia')))); ?>"><? _e('Qué es fixmedia'); ?></a></li>
+					<li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('que-es-remedia')))); ?>"><? _e('Qué es remedia'); ?></a></li>
 					<li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('como-funciona')))); ?>"><? _e('Cómo funciona'); ?></a></li>
 					<li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('que-queremos-conseguir')))); ?>"><? _e('Qué queremos conseguir'); ?></a></li>
 					<li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('equipo')))); ?>"><? _e('Equipo'); ?></a></li>
@@ -44,7 +44,7 @@
 	<section class="logos-footer">
 		<div class="wrap clearfix">
 			<div class="develop">
-				<h3 class="title"><? _e('Desarrollado por'); ?>:</h3>
+				<h3 class="title"><? _e('Reutilizamos el software desarrollado por'); ?>:</h3>
 				<a href="http://nxtmdia.com"><img alt="Nxtmdia" src="<?= base_url('images/logos/logo-nxtmdia.jpg'); ?>"/></a>
 			</div>
 			<div class="cofin">

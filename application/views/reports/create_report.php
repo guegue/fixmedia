@@ -1,6 +1,6 @@
 <div id="container" class="clearfix sending new clearfix">
 	<div id="content">
-		<h1 class="title sep"><? _e('Envía una noticia'); ?></h1>
+		<h1 class="title sep"><? _e('Reporta una noticia'); ?></h1>
 		<p class="sub_title"><? _e('Si has leído una noticia que crees que puedes corregir o ampliar, comienza introduciendo aquí su URL'); ?></p>
 		<?php echo form_open($this->router->reverseRoute('reports-create')) ?>
 			<div class="row wrap_create_report">

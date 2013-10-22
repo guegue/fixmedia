@@ -226,7 +226,7 @@ class Services extends MY_Controller {
                $thumb = $path . 'thumb-' . $report->id . ".png";
                $thumb_report = $path . 'thumb-report-' . $report->id . ".png";
                $thumb_home = $path . 'thumb-home-' . $report->id . ".png";
-               $cmd = '/usr/local/bin/phantomjs ' . getcwd() . '/js/rasterize.js';
+               $cmd = '/bin/phantomjs ' . getcwd() . '/js/rasterize.js';
 
                if (!file_exists($thumb)) :
                   system("$cmd $report->url $thumb");
@@ -237,7 +237,7 @@ class Services extends MY_Controller {
                   if (!file_exists($thumb_report)) :
                      $config['image_library'] = 'gd2';
                      $config['source_image'] = $thumb;
-                     $config['create_thumb'] = FALSE;
+                     $config['create_thumb'] = TRUE;
                      $config['new_image'] = $thumb_report;
                      $config['maintain_ratio'] = FALSE;
                      $config['width']   = 180;
@@ -251,7 +251,7 @@ class Services extends MY_Controller {
                   if (!file_exists($thumb_home) && file_exists($thumb_report)) :
                      $config['image_library'] = 'gd2';
                      $config['source_image'] = $thumb_report;
-                     $config['create_thumb'] = FALSE;
+                     $config['create_thumb'] = TRUE;
                      $config['new_image'] = $thumb_home;
                      $config['maintain_ratio'] = FALSE;
                      $config['width']   = 150;

@@ -7,7 +7,7 @@
 		<div class="total_fixes_counter"><span class="count"><?= $total_fixes[0]->total; ?></span> <? _e('fixes totales'); ?></div>
 	</section>
 	<section class="block ranking users">
-		<h3 class="title"><? _e('Posición en Fixmedia'); ?></h3>
+		<h3 class="title"><? _e('Posición en RE:media'); ?></h3>
 		<? foreach ($sites_ranking as $site_rank) :?>
 			<?$sites_ranking_position++;?>
 			<div class="row <?= $site_rank->site==$site ? 'user' : 'clearfix'; ?>">

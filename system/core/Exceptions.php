@@ -134,6 +134,7 @@ class CI_Exceptions {
 	 */
 	function show_error($heading, $message, $template = 'error_general', $status_code = 500)
 	{
+		error_log($message); //FIXME: no tenia otra manera de depurar
 		set_status_header($status_code);
 
 		$message = '<p>'.implode('</p><p>', ( ! is_array($message)) ? array($message) : $message).'</p>';

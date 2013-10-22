@@ -11,7 +11,7 @@
 				<p class="source"><? _e('Fuente'); ?>: <?= $report->site; ?></p>
 			</div>
 			<? if ($logged_in && $report->is_removable($the_user->id)) : ?>
-				<p class="remove-report"><? _e('Esta noticia la has enviado tú y todavía puedes eliminarla.'); ?> <a href="<?= site_url('reports/delete/' . $report->id); ?>"><? _e('Eliminar noticia'); ?></a></p>
+				<p class="remove-report"><? _e('Esta noticia la has reportado tú y todavía puedes eliminarla.'); ?> <a href="<?= site_url('reports/delete/' . $report->id); ?>"><? _e('Eliminar noticia'); ?></a></p>
 			<? endif; ?>
 		</section>
 
@@ -19,18 +19,18 @@
 			<h2 class="action_title"><? _e('Ya has hecho fix a esta noticia.'); ?> <strong><? _e('¿Qué quieres hacer con ella ahora?'); ?></strong></h2>
 
 			<a href="<?= site_url($this->router->reverseRoute('reports-view-share', array('slug' => $report->slug, 'share' => 'share'))); ?>" class="button icon share">
-			<? _e('Compártela'); ?> <span class="subtitle"><? _e('Para arreglarla entre todos'); ?></span>
+			<? _e('Compártela'); ?> <span class="subtitle"><? _e('Para que la comunidad la re:medie'); ?></span>
 			</a>
 
 			<a href="<?= site_url($this->router->reverseRoute('reports-send' , array('id' => $report->id))); ?>" class="button submit icon add_report">
-			<? _e('Arréglala'); ?> <span class="subtitle"><? _e('Empieza tú mismo'); ?></span>
+			<? _e('RE:MÉDIALA'); ?> <span class="subtitle"><? _e('ahorita mismo'); ?></span>
 			</a>
 		</section>
 
 	</div>
 	<aside id="sidebar" class="report">
 		<div class="counter"><span class="count count-vote-<?= $report->id ?>"><?= $report->votes_count ?></span>
-			<? _e('persona (tu) quiere que alguien la arregle'); ?>
+			<? _e('persona (tú) quiere que alguien la re:medie'); ?>
 		</div>
 	</aside>
 </div>

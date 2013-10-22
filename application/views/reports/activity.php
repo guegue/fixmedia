@@ -71,11 +71,11 @@
 			<div class="wrap-counter">
 				<span class="count count-vote-<?= $report->id ?>"><?= $report->votes_count ?></span>
 				<? if ($report->votes_count==1 && ($logged_in && $report->is_voted($the_user->id))) : ?>
-				<? _e('persona (tu) quiere que alguien la arregle'); ?>
+				<? _e('persona (tu) quiere que alguien la re:medie'); ?>
 				<? elseif ($report->votes_count==1) :?>
-				<? _e('persona quiere que alguien la arregle. ¿Y tú?'); ?>
+				<? _e('persona quiere que alguien la re:medie. ¿Y tú?'); ?>
 				<? else : ?>
-				<? _e('personas quieren que alguien la arregle. ¿Y tú?'); ?>
+				<? _e('personas quieren que alguien la re:medie. ¿Y tú?'); ?>
 				<? endif; ?>
 			</div>
 			<div class="wrap-fix">

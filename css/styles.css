@@ -335,6 +335,7 @@ a:hover {text-decoration:underline;}
 			bottom:85px;
 			font-weight:bold;
 			font-style:normal;
+			font-family:"arvo";
 			font-size:25px;
 			line-height:27px;
 			color:#333;
@@ -431,7 +432,7 @@ a:hover {text-decoration:underline;}
 		margin-top:10px;
 	}
 		.has_reported .fix_reports_counters { background-color:#79B4CB; }
-		.first_fix .fix_reports_counters { background:#EAC000; }
+		.first_fix .fix_reports_counters { background:#F00; }
 
 	.fix_reports_counters .count {
 		font-size:25px;
@@ -444,7 +445,7 @@ a:hover {text-decoration:underline;}
 		border-right: 1px solid #989898;
 	}
 		.has_reported .fix_reports_counters .fixes {border-color:#62A2B6}
-		.first_fix .fix_reports_counters .fixes {border-color:#CCA100}
+		.first_fix .fix_reports_counters .fixes {border-color:#C00}
 	.fix_reports_counters .reports {
 		float:left;
 		width:74px;
@@ -455,7 +456,7 @@ a:hover {text-decoration:underline;}
 	.fix_reports_counters .reports .count {font-size:20px;}
 	.sending .wrap_type {
 	    display:block;
-	    background:#CCA100;
+	    background:#C00;
 	    font-size:20px;
 	    line-height:70px;
 	    width:319px;
@@ -466,7 +467,7 @@ a:hover {text-decoration:underline;}
 	    margin-bottom:5px;
 	}
 		.sending .wrap_type.active {
-			background:#EAC000;
+			background:#F00;
 		}
 		.sending .wrap_create_report {width:580px;}
 	.sending .text {
@@ -565,7 +566,7 @@ a:hover {text-decoration:underline;}
 			.sending  .wrap_urls span.error { margin-top:-5px; margin-bottom:10px;}
 		.sending .submit {display:none; float:right;}
 		.sending .add {
-			color:#EAC000;
+			color:#F00;
 			font-size:15px;
 			margin:10px 0;
 			display:none;
@@ -577,7 +578,7 @@ a:hover {text-decoration:underline;}
 			cursor:pointer;
 		}
 		.sending .edit {
-			color:#EAC000;
+			color:#F00;
 			font-size:15px;
 			margin:10px 0;
 			display:block;
@@ -1273,7 +1274,7 @@ a:hover {text-decoration:underline;}
 #sidebar .counter {
 	font-size:17px;
 	color:#ffffff;
-	background:#EAC000;
+	background:#F00;
 	border-radius:15px;
 	padding:10px 45px 20px 45px;
 	text-align:center;
@@ -1301,12 +1302,11 @@ a:hover {text-decoration:underline;}
 		font-weight:bold;
 	}
 	#sidebar .counter .wrap-counter {
-		border-bottom:1px solid #CCA100;
 		padding-bottom:20px;
 	}
 	#sidebar .counter .wrap-fix {
 		padding-top:20px;
-		border-top:1px solid #F6DA62;
+		border-top:1px solid #C00;
 		margin-bottom:20px;
 	}
 
@@ -1362,7 +1362,7 @@ a:hover {text-decoration:underline;}
 		background-position:right -455px;
 	}
 		#sidebar.report .add_report:hover {
-			color:#999999;
+			color:#FFF;
 			background-position:right -407px;
 			text-decoration:none;
 		}
@@ -1485,10 +1485,10 @@ a:hover {text-decoration:underline;}
 		font-size:17px;
 		line-height:17px;
 	}
-		.profile #sidebar .fix_reports_counters {background:#EAC000;}
+		.profile #sidebar .fix_reports_counters {background:#F00;}
 		.profile.source #sidebar .fix_reports_counters {background:#79B4CB;}
 			.total_fixes_counter {
-				background:#EAC000;
+				background:#F00;
 				color:#ffffff;
 				border-bottom-right-radius: 15px;
 				border-bottom-left-radius: 15px;
@@ -1509,8 +1509,8 @@ a:hover {text-decoration:underline;}
 		width:149px;
 		padding:7px 0px;
 	}
-		.profile #sidebar .fix_reports_counters .fixes {border-color:#CCA100;}
-		.profile #sidebar .fix_reports_counters .reports {border-color:#F8E284;}
+		.profile #sidebar .fix_reports_counters .fixes {border-color:#C00;}
+		.profile #sidebar .fix_reports_counters .reports {border-color:#C00;}
 		.profile.source #sidebar .fix_reports_counters .fixes {border-color:#62A2B6}
 		.profile.source #sidebar .fix_reports_counters .reports {border-color:#A3D1DF}
 	#sidebar .fix_reports_counters .count {
@@ -1571,7 +1571,7 @@ a:hover {text-decoration:underline;}
 	display: block;
 	font-size: 17px;
 	color: #ffffff;
-	border: 1px solid #2760BF;
+	border: 1px solid #C00;
 	border-radius: 6px;
 	padding: 0 15px;
 	line-height: 40px;
@@ -1601,7 +1601,7 @@ input.button {height:40px;}
 	}
 		.button.icon.share:hover { background-position: right -165px; }
 	.button.icon.add_report {
-		color:#999999;
+		color:#FFF;
 		background-position: right -220px;
 		border-color:#CCCCCC;
 	}
@@ -1612,7 +1612,7 @@ input.button {height:40px;}
 		text-align:center;
 		bottom:-20px;
 		left:0;
-		color:#999999;
+		color:#FFF;
 		font-size:14px;
 		text-transform:none;
 		line-height:14px;
@@ -2051,7 +2051,7 @@ input#invitation_code, input#identity, input#username, input#email, input#passwo
 		display:block;
 		height:99px;
 		width:367px;
-		background:url('../images/logo-fixmedia.png') 0 0px no-repeat;
+		background:url('../images/logo-remedia.png') 0 0px no-repeat;
 		margin:20px auto 150px auto;
 	}
 		.landing .logo a {

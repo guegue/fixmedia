@@ -141,7 +141,7 @@
 			$ci->email->clear();
 			$ci->email->from($ci->config->item('admin_email', 'ion_auth'), $ci->config->item('site_title', 'ion_auth'));
 			$ci->email->to($user->email);
-			$ci->email->subject( _('Tu actividad diaria en Fixmedia'));
+			$ci->email->subject( _('Tu actividad diaria en Re:media'));
 			$ci->email->message($message);
 
 			$ci->email->send();
