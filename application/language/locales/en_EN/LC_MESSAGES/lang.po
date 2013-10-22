@@ -203,11 +203,11 @@ msgid "Más urgentes"
 msgstr "Popular"
 
 #: /Users/dac/projects/remedia/application/controllers/reports.php:17
-msgid "Noticias para arreglar con más repercusión en este momento. RE:media es la herramienta que te permite mejorar las noticias, pidiendo que alguien las arregle, añadiendo más y mejor información o corrigiendo la existente."
+msgid "Noticias para re:mediar con más repercusión en este momento. RE:media es la herramienta que te permite mejorar las noticias, pidiendo que alguien las arregle, añadiendo más y mejor información o corrigiendo la existente."
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/controllers/reports.php:18
-msgid "Noticias para arreglar con más repercusión en este momento"
+msgid "Noticias para re:mediar con más repercusión en este momento"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/controllers/reports.php:37
@@ -1383,11 +1383,11 @@ msgstr "re:medios"
 
 #: /Users/dac/projects/remedia/application/views/source/profile.php:71
 #, fuzzy
-msgid "Tipos de reportes"
+msgid "Tipos de re:medios"
 msgstr "reports"
 
 #: /Users/dac/projects/remedia/application/views/source/profile.php:72
-msgid "¿Se equivoca mucho o se queda corto? Este gráfico de tarta nos indica si los reportes que está recibiendo esta fuente son más correcciones o ampliaciones."
+msgid "¿Se equivoca mucho o se queda corto? Este gráfico de tarta nos indica si los re:medios que está recibiendo este medio son más correcciones o ampliaciones."
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/source/profile.php:78
@@ -1395,7 +1395,7 @@ msgid "Actividad por meses"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/source/profile.php:79
-msgid "¿En qué momentos recibe esta fuente más re:medios y/o más reportes? Este gráfico temporal nos lo muestra."
+msgid "¿En qué momentos recibe este medio más re:medios y/o más reportes? Este gráfico temporal nos lo muestra."
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/sources/list_sources.php:7

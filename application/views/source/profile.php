@@ -68,15 +68,15 @@
 			    <div class="chart_wrap clearfix">
 			    	<div class="chart" id="fix_vs_rep"></div>
 			    	<div class="explanation">
-			    		<h3 class="title"><? _e('Tipos de reportes'); ?></h3>
-			    		<p class="hint"><? _e('¿Se equivoca mucho o se queda corto? Este gráfico de tarta nos indica si los reportes que está recibiendo esta fuente son más correcciones o ampliaciones.'); ?> </p>
+			    		<h3 class="title"><? _e('Tipos de re:medios'); ?></h3>
+			    		<p class="hint"><? _e('¿Se equivoca mucho o se queda corto? Este gráfico de tarta nos indica si los re:medios que está recibiendo este medio son más correcciones o ampliaciones.'); ?> </p>
 			    	</div>
 			    </div>
 			 	<div class="chart_wrap clearfix">
 			    	<div class="chart" id="actions_by_month"></div>
 			    	<div class="explanation">
 			    		<h3 class="title"><? _e('Actividad por meses'); ?></h3>
-			    		<p class="hint"><? _e('¿En qué momentos recibe esta fuente más fixes y/o más reportes? Este gráfico temporal nos lo muestra.'); ?></p>
+			    		<p class="hint"><? _e('¿En qué momentos recibe este medio más reportes y/o re:medios? Este gráfico temporal nos lo muestra.'); ?></p>
 			    	</div>
 			    </div>
 			</div>
