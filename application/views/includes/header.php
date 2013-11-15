@@ -23,7 +23,7 @@
 <body>
     <header id="header">
         <div class="wrap clearfix">
-            <p class="main_title"><a href="<?php echo base_url(); ?>" title="<? _e('Remedia.la, arregla las noticias'); ?>"><img src="<?= base_url('images/logo-remedia.png'); ?>" alt="<? _e('Remedia.la, arregla las noticias'); ?>" title="<? _e('Remedia.la, arregla las noticias'); ?>"/></a></p>
+            <p class="main_title"><a href="<?php echo base_url(); ?>" title="<? _e('RE:media, mejora las noticias'); ?>"><img src="<?= base_url('images/logo-remedia.png'); ?>" alt="<? _e('RE:media, mejora las noticias'); ?>" title="<? _e('RE:media, mejora las noticias'); ?>"/></a></p>
             <nav class="top-menu">
                 <ul class="menu clearfix">
                     <li><? _e('arrastra el botón'); ?> <a href="javascript:(function()%7B%20%20_my_script%3Ddocument.createElement(%27SCRIPT%27)%3B%20%20_my_script.type%3D%27text/javascript%27%3B%20%20_my_script.src%3D%27http://remedia.la/js/bookmarklet.js%27%3B%20%20document.getElementsByTagName(%27head%27)%5B0%5D.appendChild(_my_script)%3B%7D)()%3B" class="bookmarklet"><? _e('Enviar a RE:media'); ?></a> <? _e('a tu navegador'); ?> [<a href="<?= site_url($this->router->reverseRoute('statics', array('page' => 'marcador'))); ?>"><? _e('+ info'); ?></a>]</li>
@@ -64,7 +64,7 @@
     </header>
     <nav class="main-menu">
         <ul class="menu clearfix">
-            <li><a href="<?= site_url($this->router->reverseRoute('reports-create')); ?>" class="button icon fixit"><? _e('Enviar a RE:media'); ?></a></li>
+            <li><a href="<?= site_url($this->router->reverseRoute('reports-create')); ?>" class="button icon fixit"><? _e('Reportar'); ?></a></li>
             <li class="<?= is_cur_page($this, 'reports','index') ? 'current' : ''; ?>"><a class="link" href="<?= site_url(); ?>"><? _e('Más urgentes'); ?></a></li>
             <li class="<?= is_cur_page($this, 'reports','recents') ? 'current' : ''; ?>"><a class="link" href="<?= site_url($this->router->reverseRoute('home-recents')); ?>"><? _e('Recientes'); ?></a></li>
             <li class="<?= is_cur_page($this, 'reports','pendings') ? 'current' : ''; ?>"><a class="link" href="<?= site_url($this->router->reverseRoute('home-pending')); ?>"><? _e('Pendientes'); ?></a></li>
@@ -73,7 +73,7 @@
             <li class="<?= is_cur_page($this, 'stats','index') ? 'current' : ''; ?>"><a class="link" href="<?= site_url($this->router->reverseRoute('stats')); ?>"><? _e('Estadísticas'); ?></a></li>
             <li class="search">
                 <form action="<?= site_url($this->router->reverseRoute('search')); ?>" method="GET">
-                    <input type="text" value="<?= isset($term) ? $term : ''; ?>" name="q" placeholder="<? echo gettext('noticias, reportes, usuarios'); ?>" />
+                    <input type="text" value="<?= isset($term) ? $term : ''; ?>" name="q" placeholder="<? echo gettext('reportes, re:medios, re:mediantes'); ?>" />
                 </form>
             </li>
         </ul>

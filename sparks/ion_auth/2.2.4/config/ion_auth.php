@@ -82,7 +82,7 @@
 	/**
 	 * Admin Email, admin@example.com
 	 */
-	$config['admin_email']		   = "no-reply@remedia.la";
+	$config['admin_email']		   = "comunidad@remedia.la";
 	
 	/**
 	 * Default group, use name

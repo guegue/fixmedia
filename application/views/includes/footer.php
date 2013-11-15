@@ -3,39 +3,38 @@
 		<div class="wrap clearfix">
 			<div class="block">
 				<p class="logo">Remedia.la</p>
-				<p><? _e('Re:media es una plataforma latinoamericana para la edición colaborativa de noticias, un proyecto de <a href="http://guegue.com" target="_blank\">GüeGüe Comunicaciones</a>'); ?></p>
+				<p><? _e('Plataforma latinoamericana <br/>para la edición colaborativa de noticias,<br/> un proyecto de <a href="http://guegue.com" target="_blank\">GüeGüe Comunicaciones</a>'); ?></p>
 			</div>
 
 			<nav class="clearfix menus">
 				<ul class="menu">
-					<li class="name"><? _e('Menú'); ?></li>
+					<li class="name"><? _e('Índice'); ?></li>
 					<li><a href="<?= site_url(); ?>"><? _e('Portada'); ?></a></li>
 					<li><a href="<?= site_url(); ?>"><? _e('Más urgentes'); ?></a></li>
 					<li><a href="<?= site_url($this->router->reverseRoute('home-pending')); ?>"><? _e('Pendientes'); ?></a></li>
 					<li><a href="<?= site_url($this->router->reverseRoute('home-recents')); ?>"><? _e('Recientes'); ?></a></li>
-					<li><a href="<?= site_url($this->router->reverseRoute('users')); ?>"><? _e('Top re:mediantes'); ?></a></li>
-					<li><a href="<?= site_url($this->router->reverseRoute('sources')); ?>"><? _e('Top medios'); ?></a></li>
 					<li><a href="<?= site_url($this->router->reverseRoute('stats')); ?>"><? _e('Estadísticas'); ?></a></li>
 				</ul>
 				<ul class="menu">
-					<li class="name"><? _e('Social'); ?></li>
-					<li><a href="<?= site_url(); ?>"><? _e('Registro'); ?></a></li>
-					<li><a href="<?= site_url(); ?>"><? _e('Entrar'); ?></a></li>
+					<li class="name"><? _e('Comunidad'); ?></li>
+					<li><a href="http://remedia.la/usuario/registro"><? _e('Registro'); ?></a></li>
+					<li><a href="http://remedia.la/usuario/entrar"><? _e('Inicio de sesión'); ?></a></li>
+					<li><a href="<?= site_url($this->router->reverseRoute('user-profile', array('username' => $the_user->username))); ?>"><? _e('Mi perfil'); ?></a></li>
 					<li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('marcador')))); ?>"><? _e('Usa nuestro marcador'); ?></a></li>
-					<li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('periodistas')))); ?>"><? _e('¿Eres periodista?'); ?></a></li>
-					<li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('creadores')))); ?>"><? _e('¿Creas contenido?'); ?></a></li>
-					<li><a href="http://remedia.la/blog"><? _e('Blog'); ?></a></li>
+					<li><a href="<?= site_url($this->router->reverseRoute('users')); ?>"><? _e('Top re:mediantes'); ?></a></li>
+					<li><a href="<?= site_url($this->router->reverseRoute('sources')); ?>"><? _e('Top medios'); ?></a></li>
+					<li><a href="http://blogremedia.wordpress.com"><? _e('Blog'); ?></a></li>
+					<li><a href="https://www.facebook.com/remedia.la"><? _e('En Facebook'); ?></a></li>
+					<li><a href="https://twitter.com/RE_media_"><? _e('En Twitter'); ?></a></li>
 				</ul>
 				<ul class="menu">
-					<li class="name">Manual</li>
-					<li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('que-es-remedia')))); ?>"><? _e('Qué es remedia'); ?></a></li>
+					<li class="name">Ayuda</li>
+					<li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('que-es-remedia')))); ?>"><? _e('Qué es RE:media'); ?></a></li>
 					<li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('como-funciona')))); ?>"><? _e('Cómo funciona'); ?></a></li>
-					<li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('que-queremos-conseguir')))); ?>"><? _e('Qué queremos conseguir'); ?></a></li>
 					<li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('equipo')))); ?>"><? _e('Equipo'); ?></a></li>
-					<li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('cofinanciadores')))); ?>"><? _e('Cofinanciadores'); ?></a></li>
 					<li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('faq')))); ?>"><? _e('FAQ'); ?></a></li>
 					<li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('contacto')))); ?>"><? _e('Contacto'); ?></a></li>
-					<li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('aviso-legal')))); ?>"><? _e('Legal'); ?></a></li>
+					<!--<li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('aviso-legal')))); ?>"><? _e('Información legal'); ?></a></li>-->
 
 				</ul>
 			</nav>
@@ -53,7 +52,7 @@
 -->
 			</div>
 		</div>
-		<p class="server"><? _e('Hospedaje y desarrollo web: <a href="http://guegue.com">Guegue</a>'); ?></p>
+		<p class="server"><? _e('Hospedaje y desarrollo web: <a href="http://guegue.com">Güeüe</a>'); ?></p>
 	</section>
 
 </footer>

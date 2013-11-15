@@ -993,7 +993,7 @@ msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/reports/activity.php:83
 #: /Users/dac/projects/remedia/application/views/reports/activity.php:87
-msgid "Haciendo Fix estás diciendo que esta noticia es mejorable en algún aspecto"
+msgid "Haciendo Re:medie estás diciendo que esta noticia es mejorable en algún aspecto"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/reports/activity.php:91

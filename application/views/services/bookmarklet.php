@@ -22,7 +22,7 @@
 			<?php echo form_open($this->router->reverseRoute('reports-create'), array('target' => '_blank', 'class' => 'fix_new', 'method' => 'get')) ?>
 		<? endif; ?>
 			<input type="hidden" value="<?= $url ?>" name="url" />
-			<input class="submit button <?= $voted ? 'voted' : ''; ?>" type="submit" name="submit" value="FIX" />
+			<input class="submit button <?= $voted ? 'voted' : ''; ?>" type="submit" name="submit" value="re:mediar" />
 			<? if (isset($votes)) : ?>
 				<span class="votes"><i></i><u></u><?=$votes?></span>
 			<? endif; ?>

@@ -60,7 +60,7 @@
     margin-top:1px;
     background:#ffffff;
     border-radius: 3px;
-    position: relative;
+    position: absolute;
 }
     .votes i, .votes u {
         position: absolute;

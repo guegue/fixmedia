@@ -6,7 +6,6 @@
 			<div class="row wrap_create_report">
 				<label class="label" for="title"><? _e('Url de la noticia'); ?></label>
 				<input class="text" type="input" placeholder="<? _e('http://ejemplo.com/noticia.html'); ?>" value="<?= isset($url) ? $url : set_value('url'); ?>" name="url" /><br />
-				<span class="help"><? _e('Si quieres, puedes empezar buscando noticias que reportar <a target="_blank" href="https://news.google.es/">aquí</a>.'); ?></span>
 				<?php echo form_error('url', '<span class="error">', '</span>'); ?>
 				<? if (!empty($error_url_check)) : ?>
 					<span class="error"><?=$error_url_check ?></span>
