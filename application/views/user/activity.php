@@ -13,7 +13,7 @@
 						<a class="edit_profile_link" href="<?=site_url($this->router->reverseRoute('user-edit'));?>"><? _e('Editar perfil'); ?></a>
 					<? endif; ?>
 				</h1>
-				<p class="when"><? _e('Mejorando noticias desde el'); ?> <?= date('d/m/Y', $user->created_on); ?></p>
+				<p class="when"><? _e('Re:mediando noticias desde el'); ?> <?= date('d/m/Y', $user->created_on); ?></p>
 				<p class="bio"><?= $user->bio ?></p>
 				<? if ($user->url) : ?><p class="url"><? _e('Web'); ?>: <a href="<?= $user->url ?>"><?= $user->url ?></a></p><? endif; ?>
 				<? if ($user->twitter) : ?>
@@ -27,7 +27,7 @@
 		<section class="tabs notabs">
 			<ul class="tabs_items">
 				<li><a href="<?= site_url($this->router->reverseRoute('user-profile', array('username' => $the_user->username))); ?>"><? _e('Estadísticas'); ?></a></li>
-				<li><a href="<?= site_url($this->router->reverseRoute('user-profile', array('username' => $the_user->username))); ?>#fixes"><? printf(_('Noticias mejoradas por %'), $user->name); ?></a></li>
+				<li><a href="<?= site_url($this->router->reverseRoute('user-profile', array('username' => $the_user->username))); ?>#fixes"><? printf(_('Noticias re:mediadas por %'), $user->name); ?></a></li>
 				<li class="ui-state-active"><a href="#activity"><? _e('Actividad'); ?> <? if (count($the_user->unread_activity)) : ?> (<?= count($the_user->unread_activity); ?>)<? endif; ?></a></li>
 			</ul>
 			<div id="activity">
@@ -46,7 +46,7 @@
 				<? endif; ?>
 			</div>
 		</section>
-		<p class="more-actions"><? _e('Ir a...'); ?> <a href="<?= site_url($this->router->reverseRoute('reports-create')); ?>"><? _e('Mejorar una noticia ahora'); ?></a></p>
+		<p class="more-actions"><? _e('Ir a...'); ?> <a href="<?= site_url($this->router->reverseRoute('reports-create')); ?>"><? _e('Re:mediar una noticia ahora'); ?></a></p>
 	</div>
 	<?php $this->load->view('includes/sidebar-user'); ?>
 </div>

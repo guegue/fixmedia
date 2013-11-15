@@ -15,7 +15,7 @@ class Members extends MY_Controller {
 		$this->pagination->initialize($config);
 		$data['pagination_links'] = $this->pagination->create_links();
 		$data['page_title'] =  _("Top ranking de usuarios");
-		$data['subtitle'] =  _("Usuarios con más actividad global (fixes, reportes y noticias descubiertas) en RE:media");
+		$data['subtitle'] =  _("Personas usuarias con más actividad global (reportes, re:medios y noticias descubiertas)");
 		$data['title'] =  _("Top re:mediantes");
 		$data['description'] =  _("Listados de usuarios registrados en RE:media");
 		$data['main_content'] = 'users/list_users';
@@ -38,8 +38,8 @@ class Members extends MY_Controller {
 		$this->pagination->initialize($config);
 		$data['pagination_links'] = $this->pagination->create_links();
 		$data['page_title'] =  _("Top ranking de usuarios por reportes");
-		$data['subtitle'] =  _("Usuarios que más reportes han aportado");
-		$data['title'] =  _("Top re:mediantes por reportes");
+		$data['subtitle'] =  _("Personas usuarias que más correcciones y ampliaciones han aportado");
+		$data['title'] =  _("Top re:mediantes por re:medios");
 		$data['description'] =  _("Listados de usuarios registrados en RE:media ordenados por número de reportes");
 		$data['main_content'] = 'users/list_users';
 		$data['page'] = $page;
@@ -60,8 +60,8 @@ class Members extends MY_Controller {
 		$this->pagination->initialize($config);
 		$data['pagination_links'] = $this->pagination->create_links();
 		$data['page_title'] =  _("Top ranking de usuarios por fixes");
-		$data['subtitle'] =  _("Usuarios que más fixes han recibido en sus envíos");
-		$data['title'] =  _("Top re:mediantes por fixes");
+		$data['subtitle'] =  _("Personas usuarias que más reportes han acumulado en sus descubrimientos");
+		$data['title'] =  _("Top re:mediantes por re:medios");
 		$data['description'] =  _("Listados de usuarios registrados en RE:media ordenados por número de fixes");
 		$data['main_content'] = 'users/list_users';
 		$data['page'] = $page;
@@ -84,7 +84,7 @@ class Members extends MY_Controller {
 		$this->pagination->initialize($config);
 		$data['pagination_links'] = $this->pagination->create_links();
 		$data['page_title'] =  _("Top ranking de usuarios por descubrimientos");
-		$data['subtitle'] =  _("Usuarios que han hecho el primer fix al mayor número de noticias");
+		$data['subtitle'] =  _("Re:mediantes que han descubierto el mayor número de noticias");
 		$data['title'] =  _("Top re:mediantes por descubrimientos");
 		$data['description'] =  _("Listados de usuarios registrados en RE:media ordenados por número de descubrimientos");
 		$data['main_content'] = 'users/list_users';

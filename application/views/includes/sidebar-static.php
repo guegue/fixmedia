@@ -23,7 +23,7 @@
 	<? endif; ?>
 	<? if (isset($sites_most_reported)) :?>
 	<section class="block ranking">
-		<h3 class="title"><? _e('Medios con más remedios'); ?></h3>
+		<h3 class="title"><? _e('Medios con más re:medios'); ?></h3>
 		<? $pos=0; ?>
 		<? foreach ($sites_most_reported as $site) :?>
 			<?$pos++;?>

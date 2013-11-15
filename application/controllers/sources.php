@@ -16,7 +16,7 @@ class Sources extends MY_Controller {
 		$data['pagination_links'] = $this->pagination->create_links();
 		$data['page_title'] =  _("Top ranking de fuentes");
 		$data['title'] =  _("Top medios");
-		$data['subtitle'] =  _("Cuáles son los medios más presentes en RE:media por Fixes totales, reportes totales y noticias");
+		$data['subtitle'] =  _("Cuáles son los diarios con más reportes, re:medios y noticias en RE:media");
 		$data['description'] =  _("Listados de fuentes registrados en RE:media");
 		$data['main_content'] = 'sources/list_sources';
 		$data['page'] = $page;
@@ -37,8 +37,8 @@ class Sources extends MY_Controller {
 		$this->pagination->initialize($config);
 		$data['pagination_links'] = $this->pagination->create_links();
 		$data['page_title'] =  _("Top ranking de fuentes por reportes");
-		$data['subtitle'] =  _("Cuáles son los medios que han recibido más reportes");
-		$data['title'] =  _("Top medios por reportes");
+		$data['subtitle'] =  _("Cuáles son los diarios que más correcciones y/o ampliaciones han recibido");
+		$data['title'] =  _("Top medios por re:medios");
 		$data['description'] =  _("Listados de fuentes registrados en RE:media ordenados por número de reportes");
 		$data['main_content'] = 'sources/list_sources';
 		$data['page'] = $page;
@@ -61,8 +61,8 @@ class Sources extends MY_Controller {
 		$this->pagination->initialize($config);
 		$data['pagination_links'] = $this->pagination->create_links();
 		$data['page_title'] =  _("Top ranking de fuentes por fixes");
-		$data['title'] =  _("Top medios por fixes");
-		$data['subtitle'] =  _("Cuáles son los medios que han recibido más Fixes");
+		$data['title'] =  _("Top medios por reportes");
+		$data['subtitle'] =  _("Cuáles son los diarios con más noticias que necesitan un re:medio");
 		$data['description'] =  _("Listados de fuentes registrados en RE:media ordenados por número de fixes");
 		$data['main_content'] = 'sources/list_sources';
 		$data['page'] = $page;
@@ -85,7 +85,7 @@ class Sources extends MY_Controller {
 		$data['pagination_links'] = $this->pagination->create_links();
 		$data['page_title'] =  _("Top ranking de fuentes por descubrimientos");
 		$data['title'] =  _("Top medios por descubrimientos");
-		$data['subtitle'] =  _("Cuáles son los medios con más noticias diferentes en RE:media");
+		$data['subtitle'] =  _("Cuáles son los diarios con más noticias en RE:media");
 		$data['description'] =  _("Listados de fuentes registrados en RE:media ordenados por número de descubrimientos");
 		$data['main_content'] = 'sources/list_sources';
 		$data['page'] = $page;

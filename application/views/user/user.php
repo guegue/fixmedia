@@ -13,7 +13,7 @@
 						<a class="edit_profile_link" href="<?=site_url($this->router->reverseRoute('user-edit'));?>"><? _e('Editar perfil'); ?></a>
 					<? endif; ?>
 				</h1>
-				<p class="when"><? _e('Mejorando noticias desde el'); ?> <?= date('d/m/Y', $user->created_on); ?></p>
+				<p class="when"><? _e('Re:mediando noticias desde el'); ?> <?= date('d/m/Y', $user->created_on); ?></p>
 				<p class="bio"><?= $user->bio ?></p>
 					<? if ($user->url) : ?><p class="url"><? _e('Web'); ?>: <a href="<?= $user->url ?>"><?= $user->url ?></a></p><? endif; ?>
 				<? if ($user->twitter) : ?>
@@ -27,7 +27,7 @@
 		<section class="tabs">
 			<ul class="tabs_items">
 				<li><a href="#stats"><? _e('Estadísticas'); ?></a></li>
-				<li class="<?= (($page>1) ? 'ui-tabs-selected' : ''); ?>"><a href="#fixes"><? printf(_('Noticias mejoradas por %s'), $user->name); ?></a></li>
+				<li class="<?= (($page>1) ? 'ui-tabs-selected' : ''); ?>"><a href="#fixes"><? printf(_('Noticias re:mediadas por %s'), $user->name); ?></a></li>
 				<? if ($logged_in && $user->id==$the_user->id) : ?>
 				<li><a data-ajax="false" href="<?=site_url($this->router->reverseRoute('user-activity'));?>"><? _e('Actividad'); ?> <? if (count($the_user->unread_activity)) : ?> (<?= count($the_user->unread_activity); ?>)<? endif; ?></a></li>
 				<? endif; ?>
@@ -43,7 +43,7 @@
 						data.addColumn('number', 'Count');
 						data.addRows([
 						  ['Reportes', <?= count($user->subreports); ?>],
-						  ['Fixes', <?= count($user->fixes); ?>],
+						  ['Re:medios', <?= count($user->fixes); ?>],
 						]);
 						var options = { chartArea : {
 						               		width:250,
@@ -57,7 +57,7 @@
 					}
 					function fixes_by_sources() {
 						var data = google.visualization.arrayToDataTable([
-						  	['<? _e('Medios'); ?>', '<? _e('Fixes'); ?>'],
+						  	['<? _e('Medios'); ?>', '<? _e('Re:medios'); ?>'],
 						 	<? foreach ($fixes_by_sites as $site) :?>
 								[<?= "'". $site->site ."'";?>, <?=$site->fixes?>],
 							<? endforeach; ?>
@@ -76,7 +76,7 @@
 					}
 					function actions_by_month() {
 						var data = google.visualization.arrayToDataTable([
-							['<? _e('Mes'); ?>', '<? _e('Fixes'); ?>', '<? _e('Reportes'); ?>'],
+							['<? _e('Mes'); ?>', '<? _e('Reportes'); ?>', '<? _e('Re:medios'); ?>'],
 							<? foreach ($actions_by_month as $mes => $action) :?>
 								[<?= "'".date('F', mktime(0,0,0,$mes,1))."'";?>,<?= isset($action['fixes']) ? $action['fixes'] : 0; ?>,<?= isset($action['reports']) ? $action['reports'] : 0; ?>],
 							<? endforeach; ?>
@@ -110,25 +110,25 @@
 				    		<? else: ?>
 				    			<h3 class="title"><?= count($user->fixes); ?> <? _e('fixes por cada reporte'); ?></h3>
 				    		<? endif; ?>
-				    		<p class="hint"><? _e('¿Este usuario es más de ‘Fix’ o de ‘Reporte’? Este gráfico nos dice qué porcentaje de Fixes ha hecho por cada reporte aportado.'); ?></p>
+				    		<p class="hint"><? _e('¿Este usuario es más de ‘Reporte’ o de ‘Re:medio’? Este gráfico nos dice qué porcentaje de Re:medio ha hecho por cada reporte aportado.'); ?></p>
 				    	</div>
 				    </div>
 				    <div class="chart_wrap clearfix">
 				    	<div class="chart" id="actions_by_month"></div>
 				    	<div class="explanation">
 				    		<h3 class="title"><? _e('Actividad por meses'); ?></h3>
-				    		<p class="hint"><? _e('Este gráfico nos muestra en qué momentos es más activo este usuario y haciendo el qué. Azul: fixes. Rojo: reportes.'); ?></p>
+				    		<p class="hint"><? _e('Este gráfico nos muestra en qué momentos es más activo este usuario y haciendo el qué. Azul: reportes. Rojo: re:medios.'); ?></p>
 				    	</div>
 				    </div>
 				    <div class="chart_wrap clearfix">
 				    	<div class="chart" id="fixes_by_sources"></div>
 				    	<div class="explanation">
-				    		<h3 class="title"><? _e('Fixes por fuentes'); ?></h3>
+				    		<h3 class="title"><? _e('Reportes por medios'); ?></h3>
 				    		<p class="hint"><? _e('¿Qué medios, blogs, etc. son los que se benefician más de la edición de este usuario? Ordenados de mayor a menor.'); ?></p>
 				    	</div>
 				    </div>
 				<? else : ?>
-					<p class="sub_title"><? printf(_('No hay datos para mostrar, cuando %s haga algún fix o reporte, mostraremos las estadísticas.'), $user->name); ?></p>
+					<p class="sub_title"><? printf(_('No hay datos para mostrar, cuando %s haga algún reporte o re:medio, mostraremos las estadísticas.'), $user->name); ?></p>
 				<? endif; ?>
 			</div>
 			<div class="reports_list" id="fixes">
@@ -142,8 +142,8 @@
 								<img src="<?=base_url('images/sources/thumb-home-' . $vote->report->id . '.png'); ?>" width="150" alt="<? printf(_('Captura de %s'), $vote->report->title); ?>"  title="karma <?= $vote->report->karma ?> / coef <?= $vote->report->karma_value ?> / valor <?= $vote->report->karma*$vote->report->karma_value?>"/>
 							<? endif; ?>
 							<div class="clearfix fix_reports_counters">
-								<div class="fixes"><span class="count"><?= $vote->report->votes_count; ?></span> <? _e('fixes'); ?></div>
-								<div class="reports"><span class="count"><?= count($vote->report->data); ?></span> <? _e('reportes'); ?></div>
+								<div class="fixes"><span class="count"><?= $vote->report->votes_count; ?></span> <? _e('reportes'); ?></div>
+								<div class="reports"><span class="count"><?= count($vote->report->data); ?></span> <? _e('re:medios'); ?></div>
 							</div>
 						</div>
 						<h2 class="title"><a href="<?= site_url($this->router->reverseRoute('reports-view', array('slug' => $vote->report->slug))); ?>"><?=$vote->report->title;?></a></h2>
@@ -160,12 +160,12 @@
 				<? endforeach; ?>
 				<div class="pagination clearfix"><?=$pagination_links;?></div>
 			<? else : ?>
-				<p class="sub_title"><? printf(_('No hay datos para mostrar, cuando %s haga algún fix o reporte, mostraremos sus noticias.'), $user->name); ?></p>
+				<p class="sub_title"><? printf(_('No hay datos para mostrar, cuando %s haga algún reporte o re:medio, mostraremos sus noticias.'), $user->name); ?></p>
 			<? endif; ?>
 			</div>
 
 		</section>
-		<p class="more-actions"><? _e('Ir a...'); ?> <a href="<?= site_url($this->router->reverseRoute('reports-create')); ?>"><? _e('Mejorar una noticia ahora'); ?></a></p>
+		<p class="more-actions"><? _e('Ir a...'); ?> <a href="<?= site_url($this->router->reverseRoute('reports-create')); ?>"><? _e('Re:mediar una noticia ahora'); ?></a></p>
 	</div>
 	<?php $this->load->view('includes/sidebar-user'); ?>
 </div>

@@ -36,7 +36,7 @@
 	<? endif; ?>
 	<? if (isset($top_users)) :?>
 	<section class="block ranking">
-		<h3 class="title"><? _e('Usuarios más activos'); ?></h3>
+		<h3 class="title"><? _e('Re:mediantes con mayor actividad'); ?></h3>
 		<? $pos=0; ?>
 		<? foreach ($top_users as $user) :?>
 			<?$pos++;?>

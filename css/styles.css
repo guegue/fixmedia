@@ -21,7 +21,7 @@
 /* END FIXES */
 
 body {
-	font-family: nobile;
+	font-family:'Nobile',sans-serif;
 	font-size: 16px;
 }
 a {
@@ -78,9 +78,9 @@ a:hover {text-decoration:underline;}
 			bottom:25px;
 		}
 			#header .user .welcome {
-				color:#3D87B7;
+				color:#333333;
 				position: relative;
-				font-size:17px;
+				font-size:16px;
 				padding-right:25px;
 				height:40px;
 				display:block;
@@ -136,10 +136,10 @@ a:hover {text-decoration:underline;}
             	#header .user .user_info .user_avatar a {
             		display:block;
             		font-size:14px;
-            		background:#DCEBF1;
+            		background:#ccc;
             		text-align:center;
             		line-height:30px;
-            		color:#3D87B7;
+            		color:#333333;
             		margin:10px 0;
             		border-radius:15px;
             	}
@@ -155,9 +155,8 @@ a:hover {text-decoration:underline;}
                 	}
                 	#header .user .user_info .user_data .counters {
                 		font-size:15px;
-                		color:#3D87B7;
+                		color:#F00;
                 		font-weight:bold;
-                		font-style:italic;
                 		margin-bottom:15px;
                 	}
 
@@ -187,7 +186,7 @@ a:hover {text-decoration:underline;}
                 #header .user .user_info .log_out {
                 	float:right;
                 	display:block;
-                	color:#7F7F7F;
+                	color:#F00;
                 	font-size:15px;
                 	text-transform:lowercase;
                 	text-align:right;
@@ -428,7 +427,7 @@ a:hover {text-decoration:underline;}
 		text-align: center;
 		line-height: 13px;
 		padding:10px 3px;
-		border-radius: 15px;
+		border-radius: 25px;
 		margin-top:10px;
 	}
 		.has_reported .fix_reports_counters { background-color:#79B4CB; }
@@ -2043,7 +2042,7 @@ input#invitation_code, input#identity, input#username, input#email, input#passwo
 	background:#FFFFFF;
 }
 .landing #head {
-	background:#F6F6F6;
+	background:#FFFFFF;
 	padding-top:1px;
 	margin-bottom:760px;
 }
@@ -2097,7 +2096,7 @@ input#invitation_code, input#identity, input#username, input#email, input#passwo
 		.landing .forgot #content input.button {width:210px;}
 	.landing #content .row, .landing #content .label {font-weight:normal; text-align:left;}
 	.landing .outer_box {
-		background: #79B4CB;
+		background: #333;
 		color: white;
 		border-bottom-right-radius: 15px;
 		border-bottom-left-radius: 15px;
@@ -2185,12 +2184,11 @@ a.bookmarklet {
 	    line-height: 19px;
 	    padding:0px 7px 0px 25px;
 	    background:url('../images/wfix.png') 7px center no-repeat #f00;
-	    border:1px solid #dfb503;
+	    border:1px solid ##C00;
 	    border-radius: 3px;
 	    color:#ffffff !important;
 	    text-transform:lowercase;
-	    font-size:13px;
-	    font-family:"Verdana";
+	    font-size:14px;
 	    margin-right:5px;
 	}
 	.static a.bookmarklet {

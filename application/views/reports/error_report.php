@@ -19,7 +19,7 @@
 					</p>
 					<div class="fields_wrap open" id="fields_<?=$count;?>">
 						<div class="row wrap_title <?php  echo (form_error('title[' . $index . ']') ? 'wrap_error' : ''); ?>">
-							<label class="label" for="title"><? _e('¿Qué quieres arreglar?'); ?> <span class="tip"><? _e('Dilo en un titular, recuerda que al final puedes seguir añadiendo reportes a esta misma noticia'); ?></span></label>
+							<label class="label" for="title"><? _e('¿Qué quieres re:mediar?'); ?> <span class="tip"><? _e('Dilo en un titular, recuerda que al final puedes seguir añadiendo re:medios a esta misma noticia'); ?></span></label>
 							<input class="text" type="text" id="title_<?=$count;?>" name="title[]" value="<?php echo set_value('title[' . $index . ']'); ?>" maxlength="120" />
 							<span class="help">
 								<? if ($type==1) : ?>

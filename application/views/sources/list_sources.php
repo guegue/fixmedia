@@ -5,8 +5,8 @@
         <section class="tabs notabs">
         	<ul class="tabs_items">
 				<li class="<?= is_cur_page($this, 'sources','index') ? 'ui-state-active' : ''; ?>"><a href="<?= site_url($this->router->reverseRoute('sources')); ?>"><? _e('Global'); ?></a></li>
-				<li class="<?= is_cur_page($this, 'sources','fixes') ? 'ui-state-active' : ''; ?>"><a href="<?= site_url($this->router->reverseRoute('sources-fixes')); ?>"><? _e('Fixes'); ?></a></li>
-				<li class="<?= is_cur_page($this, 'sources','reports') ? 'ui-state-active' : ''; ?>"><a href="<?= site_url($this->router->reverseRoute('sources-reports')); ?>"><? _e('Reportes'); ?></a></li>
+				<li class="<?= is_cur_page($this, 'sources','fixes') ? 'ui-state-active' : ''; ?>"><a href="<?= site_url($this->router->reverseRoute('sources-fixes')); ?>"><? _e('Reportes'); ?></a></li>
+				<li class="<?= is_cur_page($this, 'sources','reports') ? 'ui-state-active' : ''; ?>"><a href="<?= site_url($this->router->reverseRoute('sources-reports')); ?>"><? _e('Re:medios'); ?></a></li>
 				<li class="<?= is_cur_page($this, 'sources','news') ? 'ui-state-active' : ''; ?>"><a href="<?= site_url($this->router->reverseRoute('sources-news')); ?>"><? _e('Noticias'); ?></a></li>
 			</ul>
         </section>
@@ -35,8 +35,8 @@
 					<? endif; ?>
 						<div class="data">
 					  		<h2 class="name"><a href="<?= site_url($this->router->reverseRoute('source-profile', array('sitename' => $source->site))); ?>"><?= $source->site; ?></a></h2>
-					  		<p class="counter <?= is_cur_page($this, 'sources','fixes') ? 'highlight' : ''; ?>"><? _e('Fixes acumulados'); ?>: <strong><?= $source->total_fixes; ?></strong></p>
-					  		<p class="counter <?= is_cur_page($this, 'sources','reports') ? 'highlight' : ''; ?>"><? _e('Reportes enviados'); ?>: <strong><?= $source->get_reports_by_site(); ?></strong></p>
+					  		<p class="counter <?= is_cur_page($this, 'sources','fixes') ? 'highlight' : ''; ?>"><? _e('Reportes acumulados'); ?>: <strong><?= $source->total_fixes; ?></strong></p>
+					  		<p class="counter <?= is_cur_page($this, 'sources','reports') ? 'highlight' : ''; ?>"><? _e('Re:medios enviados'); ?>: <strong><?= $source->get_reports_by_site(); ?></strong></p>
 					  		<p class="counter <?= is_cur_page($this, 'sources','news') ? 'highlight' : ''; ?>"><? _e('Noticias'); ?>: <strong><?= $source->news; ?></strong></p>
 					  		<p class="counter <?= is_cur_page($this, 'sources','index') ? 'highlight' : ''; ?>"><? _e('Reputación'); ?>: <strong><?= $source->karma ?></strong></p>
 					  </div>

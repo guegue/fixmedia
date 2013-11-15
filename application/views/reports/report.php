@@ -33,7 +33,7 @@
 					</span>
 					<div class="subreport_info">
 						<? if ($logged_in && $subreport->is_removable($the_user->id)) : ?>
-							<p class="remove-report"><? _e('Este reporte lo has enviado tú y todavía puedes eliminarlo.'); ?> <a href="<?= site_url('reports/delete_subreport/' . $subreport->id); ?>"><? _e('¿Eliminar reporte?'); ?></a></p>
+							<p class="remove-report"><? _e('Este re:medio lo has enviado tú y todavía puedes eliminarlo.'); ?> <a href="<?= site_url('reports/delete_subreport/' . $subreport->id); ?>"><? _e('¿Eliminar re:medio?'); ?></a></p>
 						<? endif; ?>
 						<h3 class="subreport_title"><?=$subreport->title; ?></h3>
 						<p class="authorship"><? _e('Enviado por'); ?> <a href="<?= site_url($this->router->reverseRoute('user-profile', array('username' => $subreport->user->username))); ?>"><?= $subreport->user->name; ?></a> <? _e('el'); ?> <?= $subreport->created_at->format('d/m/Y'); ?></p>
@@ -58,10 +58,10 @@
 
 						<div class="solved_button clearfix">
 							<? if ($logged_in && !$subreport->is_voted($the_user->id, 'SOLVED')) : ?>
-								<a class="question"><? _e('¿Arreglado en la noticia original?'); ?></a>
+								<a class="question"><? _e('¿Re:mediada la noticia original?'); ?></a>
 								<a href="<?php echo site_url(array('services/report_solved', $the_user->id ,$subreport->id)); ?>" id="solved-<?= $subreport->id ?>" class="report_solved solved-<?= $subreport->id ?>"><? _e('Sí'); ?></a>
 							<? elseif (!$logged_in) : ?>
-								<a class="question"><? _e('¿Arreglado en la noticia original?'); ?></a>
+								<a class="question"><? _e('¿Re:mediada la noticia original?'); ?></a>
 								<a href="<?= site_url($this->router->reverseRoute('login')); ?>" class="report_solved_nologin"><? _e('Sí'); ?></a>
 							<? endif; ?>
 							<span class="solved_counter">
@@ -102,12 +102,12 @@
 			</div>
 			<div class="wrap-fix">
 				<? if ($logged_in && !$report->is_voted($the_user->id)) : ?>
-					<a title="Haciendo Fix estás diciendo que esta noticia es mejorable en algún aspecto" href="<?php echo site_url(array('services/fix_vote',$report->id)); ?>" id="vote-<?= $report->id ?>" class="button icon fixit fix_vote">
-						FIX
+					<a title="Haciendo Re:medie estás diciendo que esta noticia es mejorable en algún aspecto" href="<?php echo site_url(array('services/fix_vote',$report->id)); ?>" id="vote-<?= $report->id ?>" class="button icon fixit fix_vote">
+						RE:MEDIE
 					</a>
 				<? elseif (!$logged_in) : ?>
-					<a title="Haciendo Fix estás diciendo que esta noticia es mejorable en algún aspecto" href="<?=  site_url($this->router->reverseRoute('login')); ?>" id="vote-<?= $report->id ?>" class="button icon fixit">
-						FIX
+					<a title="Haciendo Re:medie estás diciendo que esta noticia es mejorable en algún aspecto" href="<?=  site_url($this->router->reverseRoute('login')); ?>" id="vote-<?= $report->id ?>" class="button icon fixit">
+						RE:MEDIE
 					</a>
 				<? elseif ($logged_in && $report->is_voted($the_user->id)) : ?>
 					<div class="fix_done">¡Hecho!</div>
@@ -115,7 +115,7 @@
 			</div>
 		</div>
 		<? if ($logged_in && $report->is_voted($the_user->id)) : ?>
-			<span class="action-title"><strong>¡Ya has hecho FIX!</strong> ¿Qué quieres hacer ahora?</span>
+			<span class="action-title"><strong>¡Ya has reportado la noticia!</strong> ¿Qué quieres hacer ahora?</span>
 		<? else: ?>
 			<span class="action-title">También puedes...</span>
 		<? endif; ?>
@@ -123,7 +123,7 @@
 		<input type="hidden" id="url_report" value="<?=site_url($this->router->reverseRoute('reports-view' , array('slug' => $report->slug)));?>"/>
 		<a href="<?= site_url('services/share/' . $report->slug . '/' . $doreport); ?>" class="action-button share <?= (isset($autoshare) ? 'autoload' : ''); ?>">Compártela</a>
 		<hr class="sep"/>
-		<a href="<?= site_url($this->router->reverseRoute('reports-send' , array('id' => $report->id))); ?>" class="action-button add_report">Arréglala</a>
+		<a href="<?= site_url($this->router->reverseRoute('reports-send' , array('id' => $report->id))); ?>" class="action-button add_report">OTRO RE:MEDIO</a>
 		<a href="#" class="continue_voting" data-ajax="<?= site_url('services/next_unvoted_report'); ?>">Sigue valorando</a>
 	</aside>
 </div>

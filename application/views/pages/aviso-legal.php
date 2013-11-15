@@ -58,7 +58,7 @@
 </p>
 	<h2>Condiciones de uso</h2>
 
-<p>	1. El usuario se compromete a utilizar remedia.la como herramienta para mejorar constructivamente las noticias ya publicadas por otras fuentes a partir de los ‘Fixes’ o los ‘Reportes’. En el caso de los Reportes, el usuario se compromete a introducir en el formulario del reporte solo información fidedigna y cuya contrastación podría acreditar, aunque fuera a posteriori.
+<p>	1. El usuario se compromete a utilizar remedia.la como herramienta para mejorar constructivamente las noticias ya publicadas por otros medios a partir de los ‘Reportes’ o los ‘Re:medios’. En el caso de los Reportes, el usuario se compromete a introducir en el formulario del reporte solo información fidedigna y cuya contrastación podría acreditar, aunque fuera a posteriori.
 </p>
 <p>	2. El usuario se abstendrá de escribir y enviar enlaces difamatorios, racistas, obscenos, pornográficos, ofensivos, que promuevan el odio racial, étnico, religioso, homófobo o de género, de violencia explícita o incitación a la violencia, que afecten a la privacidad y/o derechos de la infancia.
 </p>

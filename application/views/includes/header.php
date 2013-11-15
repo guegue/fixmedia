@@ -26,8 +26,8 @@
             <p class="main_title"><a href="<?php echo base_url(); ?>" title="<? _e('Remedia.la, arregla las noticias'); ?>"><img src="<?= base_url('images/logo-remedia.png'); ?>" alt="<? _e('Remedia.la, arregla las noticias'); ?>" title="<? _e('Remedia.la, arregla las noticias'); ?>"/></a></p>
             <nav class="top-menu">
                 <ul class="menu clearfix">
-                    <li><? _e('arrastra el botón'); ?> <a href="javascript:(function()%7B%20%20_my_script%3Ddocument.createElement(%27SCRIPT%27)%3B%20%20_my_script.type%3D%27text/javascript%27%3B%20%20_my_script.src%3D%27http://remedia.la/js/bookmarklet.js%27%3B%20%20document.getElementsByTagName(%27head%27)%5B0%5D.appendChild(_my_script)%3B%7D)()%3B" class="bookmarklet"><? _e('Hacer FIX'); ?></a> <? _e('a tu navegador'); ?> [<a href="<?= site_url($this->router->reverseRoute('statics', array('page' => 'marcador'))); ?>"><? _e('+ info'); ?></a>]</li>
-                    <li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('que-es-remedia')))); ?>"><? _e('¿Qué es remedia?'); ?></a></li>
+                    <li><? _e('arrastra el botón'); ?> <a href="javascript:(function()%7B%20%20_my_script%3Ddocument.createElement(%27SCRIPT%27)%3B%20%20_my_script.type%3D%27text/javascript%27%3B%20%20_my_script.src%3D%27http://remedia.la/js/bookmarklet.js%27%3B%20%20document.getElementsByTagName(%27head%27)%5B0%5D.appendChild(_my_script)%3B%7D)()%3B" class="bookmarklet"><? _e('Enviar a RE:media'); ?></a> <? _e('a tu navegador'); ?> [<a href="<?= site_url($this->router->reverseRoute('statics', array('page' => 'marcador'))); ?>"><? _e('+ info'); ?></a>]</li>
+                    <li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('que-es-remedia')))); ?>"><? _e('¿Qué es RE:media?'); ?></a></li>
                 </ul>
             </nav>
             <? if (!$logged_in) : ?>
@@ -64,7 +64,7 @@
     </header>
     <nav class="main-menu">
         <ul class="menu clearfix">
-            <li><a href="<?= site_url($this->router->reverseRoute('reports-create')); ?>" class="button icon fixit"><? _e('FIX'); ?></a></li>
+            <li><a href="<?= site_url($this->router->reverseRoute('reports-create')); ?>" class="button icon fixit"><? _e('Enviar a RE:media'); ?></a></li>
             <li class="<?= is_cur_page($this, 'reports','index') ? 'current' : ''; ?>"><a class="link" href="<?= site_url(); ?>"><? _e('Más urgentes'); ?></a></li>
             <li class="<?= is_cur_page($this, 'reports','recents') ? 'current' : ''; ?>"><a class="link" href="<?= site_url($this->router->reverseRoute('home-recents')); ?>"><? _e('Recientes'); ?></a></li>
             <li class="<?= is_cur_page($this, 'reports','pendings') ? 'current' : ''; ?>"><a class="link" href="<?= site_url($this->router->reverseRoute('home-pending')); ?>"><? _e('Pendientes'); ?></a></li>

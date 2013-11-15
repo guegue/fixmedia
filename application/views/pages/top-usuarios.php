@@ -2,7 +2,7 @@
 	<div id="content">
 		<h1 class="title">Top re:mediantes</h1>
 		<p class="sub_title sep">Estamos trabajando en ello</p>
-		<p>Pronto verás aquí un listado de los usuarios que más están aportando a la mejora colectiva de las noticias con sus fixes y sus reportes.</p>
+		<p>Pronto verás aquí un listado de los usuarios que más están aportando a la mejora colectiva de las noticias con sus reportes y sus re:medios.</p>
 
 		<p>Aunque aún no te puedas encontrar aquí, tu actividad actual contará cuando se publique aquí el primer listado, así que <a href="http://www.remedia.la/noticia/nueva">¿por qué no empezar ya?</a></p>
 	</div>

@@ -7,16 +7,16 @@
 				<li class="ui-state-active"><a href="<?= site_url($this->router->reverseRoute('reports-activity', array('slug' => $report->slug))); ?>"><? _e('Actividad'); ?></a></li>
 			</ul>
         </section>
-		<h2 class="action_title"><strong><? _e('Están contribuyendo a mejorar esta noticia'); ?></strong> <? _e('Listado de usuarios comprometidos'); ?></h2>
+		<h2 class="action_title"><strong><? _e('Están contribuyendo a mejorar esta noticia'); ?></strong> <? _e('Listado de re:mediantes corrigiendo y/o ampliando'); ?></h2>
 		<? if (count($reporting_users)) : ?>
 		<section class="reporting_users search profile clearfix">
-			<h3 class="section_title"><? _e('Usuarios que han reportado'); ?></h3>
+			<h3 class="section_title"><? _e('Re:mediantes que han reportado'); ?></h3>
 			<? foreach ($reporting_users as $user) :  ?>
 				<article class="user_info clearfix">
 						<a class="avatar_wrap" href="<?= site_url($this->router->reverseRoute('user-profile', array('username' => $user->username))); ?>"><?=get_avatar( $user, 150);?></a>
 						<div class="data">
 					  		<h2 class="name"><a href="<?= site_url($this->router->reverseRoute('user-profile', array('username' => $user->username))); ?>"><?= $user->name; ?></a></h2>
-					  		<p class="when"><? _e('Mejorando noticias desde el'); ?> <?= date('d/m/Y', $user->created_on); ?></p>
+					  		<p class="when"><? _e('Re:mediando noticias desde el'); ?> <?= date('d/m/Y', $user->created_on); ?></p>
 					 		<? if ($user->twitter) : ?>
 					 		<p class="follow">
 					 			<a href="https://twitter.com/<?=$user->twitter;?>" class="twitter-follow-button" data-show-count="false" data-lang="es"><? _e('Seguir a'); ?> @<?=$user->twitter;?></a>
@@ -48,7 +48,7 @@
 		<? endif; ?>
 		<? if (count($only_fixes_users)) : ?>
 		<section class="only_fixes_users clearfix">
-			<h3 class="section_title"><? _e('Usuarios que solo han hecho fix'); ?></h3>
+			<h3 class="section_title"><? _e('Usuarios que solo han hecho reporte'); ?></h3>
 			<ul class="users_list small">
 			<? foreach ($only_fixes_users as $user) :  ?>
 				<li class="user_info clearfix">
@@ -80,12 +80,12 @@
 			</div>
 			<div class="wrap-fix">
 				<? if ($logged_in && !$report->is_voted($the_user->id)) : ?>
-					<a title="<? _e('Haciendo Fix estás diciendo que esta noticia es mejorable en algún aspecto'); ?>" href="<?php echo site_url(array('services/fix_vote',$report->id)); ?>" id="vote-<?= $report->id ?>" class="button icon fixit fix_vote">
-						<? _e('FIX'); ?>
+					<a title="<? _e('Haciendo Re:medie estás diciendo que esta noticia es mejorable en algún aspecto'); ?>" href="<?php echo site_url(array('services/fix_vote',$report->id)); ?>" id="vote-<?= $report->id ?>" class="button icon fixit fix_vote">
+						<? _e('RE:MEDIE'); ?>
 					</a>
 				<? elseif (!$logged_in) : ?>
-					<a title="<? _e('Haciendo Fix estás diciendo que esta noticia es mejorable en algún aspecto'); ?>" href="<?php echo base_url("index.php/auth/login"); ?>" id="vote-<?= $report->id ?>" class="button icon fixit">
-						<? _e('FIX'); ?>
+					<a title="<? _e('Haciendo Re:medie estás diciendo que esta noticia es mejorable en algún aspecto'); ?>" href="<?php echo base_url("index.php/auth/login"); ?>" id="vote-<?= $report->id ?>" class="button icon fixit">
+						<? _e('RE:MEDIE'); ?>
 					</a>
 				<? elseif ($logged_in && $report->is_voted($the_user->id)) : ?>
 					<div class="fix_done"><? _e('¡Hecho!'); ?></div>
@@ -93,7 +93,7 @@
 			</div>
 		</div>
 		<? if ($logged_in && $report->is_voted($the_user->id)) : ?>
-			<span class="action-title"><strong><? _e('¡Ya has hecho FIX!'); ?></strong> <? _e('¿Qué quieres hacer ahora?'); ?></span>
+			<span class="action-title"><strong><? _e('¡Ya has reportado la noticia!'); ?></strong> <? _e('¿Qué quieres hacer ahora?'); ?></span>
 		<? else: ?>
 			<span class="action-title"><? _e('También puedes...'); ?></span>
 		<? endif; ?>
@@ -101,7 +101,7 @@
 		<input type="hidden" id="url_report" value="<?=site_url($this->router->reverseRoute('reports-view' , array('slug' => $report->slug)));?>"/>
 		<a href="<?= site_url('services/share/' . $report->slug . '/' . $doreport); ?>" class="action-button share <?= (isset($autoshare) ? 'autoload' : ''); ?>"><? _e('Compártela'); ?></a>
 		<hr class="sep"/>
-		<a href="<?= site_url($this->router->reverseRoute('reports-send' , array('id' => $report->id))); ?>" class="action-button add_report"><? _e('Arréglala'); ?></a>
+		<a href="<?= site_url($this->router->reverseRoute('reports-send' , array('id' => $report->id))); ?>" class="action-button add_report"><? _e('OTRO RE:MEDIO'); ?></a>
 
 	</aside>
 </div>

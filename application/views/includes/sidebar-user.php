@@ -11,10 +11,10 @@
 	<? if ($logged_in && $user->id==$the_user->id) : ?>
 		<section class="user_data">
 			<p class="header row"><? _e('Noticias descubiertas'); ?> <span><?= $user->send_fixes(); ?></span></p>
-			<p class="row"><? _e('Fixes recibidos'); ?> <span><?= $user->fixes_accumulated(); ?></span></p>
-			<p class="row"><? _e('Fixes de media'); ?> <span><?= $user->fixes_avg(); ?></span></p>
+			<p class="row"><? _e('Reportes recibidos'); ?> <span><?= $user->fixes_accumulated(); ?></span></p>
+			<p class="row"><? _e('Reportes de media'); ?> <span><?= $user->fixes_avg(); ?></span></p>
 			<p class="row avg"><? _e('Media en RE:media'); ?> <span><?= avg_fixes(); ?></span></p>
-			<p class="row"><? _e('Reportes recibidos'); ?> <span><?= $user->received_reports(); ?></span></p>
+			<p class="row"><? _e('Re:medios recibidos'); ?> <span><?= $user->received_reports(); ?></span></p>
 			<p class="header row"><? _e('Reportes propios'); ?> <span><?= count($user->subreports); ?></span></p>
 			<p class="row"><? _e('Valoración media'); ?> <span><?= $user->votes_avg(); ?></span></p>
 			<p class="row avg"><? _e('Valoración media en RE:media'); ?> <span><?= avg_votes(); ?></span></p>

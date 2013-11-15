@@ -134,7 +134,7 @@ msgid "Top ranking de usuarios"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/controllers/members.php:18
-msgid "Usuarios con más actividad global (re:medios, reportes y noticias descubiertas) en RE:media"
+msgid "Personas usuarias con más actividad global (reportes, re:medios y noticias descubiertas)"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/controllers/members.php:19
@@ -150,11 +150,11 @@ msgid "Top ranking de usuarios por reportes"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/controllers/members.php:41
-msgid "Usuarios que más reportes han aportado"
+msgid "Personas usuarias que más correcciones y ampliaciones han aportado"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/controllers/members.php:42
-msgid "Top re:mediantes por reportes"
+msgid "Top re:mediantes por re:medios"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/controllers/members.php:43
@@ -182,7 +182,7 @@ msgid "Top ranking de usuarios por descubrimientos"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/controllers/members.php:87
-msgid "Usuarios que han hecho el primer fix al mayor número de noticias"
+msgid "Re:mediantes que han descubierto el mayor número de noticias"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/controllers/members.php:88
@@ -231,7 +231,7 @@ msgid "Portada - Pendientes"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/controllers/reports.php:60
-msgid "Noticias enviadas que todavía tienen pocos o ningún reporte. RE:media es la herramienta que te permite mejorar las noticias, pidiendo que alguien las arregle, añadiendo más y mejor información o corrigiendo la existente."
+msgid "Noticias reportadas que aún no ha sido re:mediadas. RE:media es la herramienta que te permite mejorar las noticias, pidiendo que alguien las arregle, añadiendo más y mejor información o corrigiendo la existente."
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/controllers/reports.php:62
@@ -239,7 +239,7 @@ msgid "Pendientes"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/controllers/reports.php:63
-msgid "Noticias enviadas que todavía tienen pocos o ningún reporte"
+msgid "Noticias reportadas que aún no ha sido re:mediadas."
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/controllers/reports.php:81
@@ -336,11 +336,11 @@ msgid "Usuario no válido"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/controllers/services.php:134
-msgid "¡Acabas de mejorar esta noticia!"
+msgid "¡Acabas de re:mediar esta noticia!"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/controllers/services.php:135
-msgid "Enséñaselo a tus amigos para que valoren positivamente tu reporte"
+msgid "Compartelo con tu gente"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/controllers/services.php:137
@@ -364,7 +364,7 @@ msgid "Top medios"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/controllers/sources.php:19
-msgid "Cuáles son los medios más presentes en RE:media por Fixes totales, reportes totales y noticias"
+msgid "Cuáles son los diarios con más reportes, re:medios y noticias en RE:media"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/controllers/sources.php:20
@@ -376,7 +376,7 @@ msgid "Top ranking de fuentes por reportes"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/controllers/sources.php:40
-msgid "Cuáles son los medios que han recibido más reportes"
+msgid "Cuáles son los diarios que más correcciones y/o ampliaciones han recibido"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/controllers/sources.php:41
@@ -396,7 +396,7 @@ msgid "Top medios por re:medios"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/controllers/sources.php:65
-msgid "Cuáles son los medios que han recibido más Fixes"
+msgid "Cuáles son los medios que han recibido más Reportes"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/controllers/sources.php:66
@@ -412,7 +412,7 @@ msgid "Top medios por descubrimientos"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/controllers/sources.php:88
-msgid "Cuáles son los medios con más noticias diferentes en RE:media"
+msgid "Cuáles son los diarios con más noticias en RE:media"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/controllers/sources.php:89
@@ -756,8 +756,8 @@ msgid "arrastra el botón"
 msgstr "drag the button"
 
 #: /Users/dac/projects/remedia/application/views/includes/header.php:29
-msgid "Hacer FIX"
-msgstr "Do FIX"
+msgid "Enviar a RE:media"
+msgstr "Sent to RE:media"
 
 #: /Users/dac/projects/remedia/application/views/includes/header.php:29
 msgid "a tu navegador"
@@ -768,8 +768,8 @@ msgid "+ info"
 msgstr "+ info"
 
 #: /Users/dac/projects/remedia/application/views/includes/header.php:30
-msgid "¿Qué es remedia?"
-msgstr "What is remedia?"
+msgid "¿Qué es RE:media?"
+msgstr "What is RE:media?"
 
 #: /Users/dac/projects/remedia/application/views/includes/header.php:38
 msgid "Notificaciones pendientes"
@@ -901,11 +901,11 @@ msgid "Noticias descubiertas"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/includes/sidebar-user.php:14
-msgid "Fixes recibidos"
+msgid "Reportes recibidos"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/includes/sidebar-user.php:15
-msgid "Fixes de media"
+msgid "Reportes de media"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/includes/sidebar-user.php:16
@@ -935,7 +935,7 @@ msgid "Posición de %s en RE:media"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/includes/sidebar.php:39
-msgid "Usuarios más activos"
+msgid "Re:mediantes con mayor actividad"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/includes/sidebar.php:44
@@ -956,15 +956,15 @@ msgid "Están contribuyendo a mejorar esta noticia"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/reports/activity.php:10
-msgid "Listado de usuarios comprometidos"
+msgid "Listado de re:mediantes corrigiendo y/o ampliando"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/reports/activity.php:13
-msgid "Usuarios que han reportado"
+msgid "Re:mediantes que han reportado"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/reports/activity.php:19
-msgid "Mejorando noticias desde el"
+msgid "Re:mediando noticias desde el"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/reports/activity.php:22
@@ -976,7 +976,7 @@ msgid "Usuarios que han valorado positivamente un reporte"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/reports/activity.php:51
-msgid "Usuarios que solo han hecho fix"
+msgid "Usuarios que solo han hecho reportes"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/reports/activity.php:74
@@ -1001,7 +1001,7 @@ msgid "¡Hecho!"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/reports/activity.php:96
-msgid "¡Ya has hecho FIX!"
+msgid "¡Ya has reportado la noticia!"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/reports/activity.php:96
@@ -1017,7 +1017,7 @@ msgid "Compártela"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/reports/activity.php:104
-msgid "Arréglala"
+msgid "OTRO RE:MEDIO"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/reports/complete_report.php:10
@@ -1080,12 +1080,12 @@ msgstr ""
 #: /Users/dac/projects/remedia/application/views/reports/edit_report.php:22
 #: /Users/dac/projects/remedia/application/views/reports/error_report.php:22
 #, fuzzy
-msgid "¿Qué quieres arreglar?"
+msgid "¿Qué quieres re:mediar?"
 msgstr "What is remedia?"
 
 #: /Users/dac/projects/remedia/application/views/reports/edit_report.php:22
 #: /Users/dac/projects/remedia/application/views/reports/error_report.php:22
-msgid "Dilo en un titular, recuerda que al final puedes seguir añadiendo reportes a esta misma noticia"
+msgid "Dilo en un titular, recuerda que al final puedes seguir añadiendo re:medios a esta misma noticia"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/reports/edit_report.php:26
@@ -1209,7 +1209,7 @@ msgid "¿Qué es mejorable en esta noticia?"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/reports/report.php:11
-msgid "Listado de reportes recibidos"
+msgid "Listado de re:medios recibidos"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/reports/report.php:13
@@ -1219,7 +1219,7 @@ msgstr "news, reports, users"
 
 #: /Users/dac/projects/remedia/application/views/reports/report.php:58
 #: /Users/dac/projects/remedia/application/views/reports/report.php:61
-msgid "¿Arreglado en la noticia original?"
+msgid "¿Re:mediada la noticia original?"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/reports/report.php:59
@@ -1333,7 +1333,7 @@ msgid "Esta noticia no está en RE:media"
 msgstr "What is RE:media?"
 
 #: /Users/dac/projects/remedia/application/views/services/bookmarklet.php:17
-msgid "¿quieres hacer fix y ser su descubridor?"
+msgid "¿quieres descubrirla reportándola por primera vez?"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/services/bookmarklet.php:31
@@ -1342,7 +1342,7 @@ msgid "ver la noticia en remedia"
 msgstr "What is RE:media?"
 
 #: /Users/dac/projects/remedia/application/views/services/bookmarklet.php:32
-msgid "arréglala tú mismo"
+msgid "Re:médiala tú mismo"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/services/share.php:12
@@ -1350,7 +1350,7 @@ msgid "Compartir en Facebook"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/services/share.php:13
-msgid "Esta noticia necesita %23FIX"
+msgid "Esta noticia necesita %23Re:mediar"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/services/share.php:13
@@ -1378,7 +1378,7 @@ msgstr ""
 #: /Users/dac/projects/remedia/application/views/sources/list_sources.php:8
 #: /Users/dac/projects/remedia/application/views/stats/stats.php:37
 #, fuzzy
-msgid "Fixes"
+msgid "Reportes"
 msgstr "re:medios"
 
 #: /Users/dac/projects/remedia/application/views/source/profile.php:71
@@ -1403,12 +1403,12 @@ msgid "Global"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/sources/list_sources.php:38
-msgid "Fixes acumulados"
+msgid "Reportes acumulados"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/sources/list_sources.php:39
 #, fuzzy
-msgid "Reportes enviados"
+msgid "Re:medios enviados"
 msgstr "reports"
 
 #: /Users/dac/projects/remedia/application/views/sources/list_sources.php:41
@@ -1422,7 +1422,7 @@ msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/stats/stats.php:23
 #, fuzzy
-msgid "fuentes"
+msgid "medios"
 msgstr "Popular"
 
 #: /Users/dac/projects/remedia/application/views/stats/stats.php:26
@@ -1430,7 +1430,7 @@ msgid "Las cifras globales de Fixmeda desde el día de su lanzamiento"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/stats/stats.php:30
-msgid "Las fuentes más importantes en RE:media en los últimos 7 días"
+msgid "Los medios más importantes en RE:media en los últimos 7 días"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/stats/stats.php:33
@@ -1438,7 +1438,7 @@ msgid "Cada globo representa una fuente (un medio, un blog, etc.). Cuanto más a
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/stats/stats.php:38
-msgid "Fixes acumulados en los últimos 7 días"
+msgid "Reportes acumulados en los últimos 7 días"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/stats/stats.php:44
@@ -1513,7 +1513,7 @@ msgid "Total"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/stats/stats.php:184
-msgid "Reportes vs Fixes en los últimos 7 días"
+msgid "Reportes vs Re:medios en los últimos 7 días"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/stats/stats.php:189
@@ -1537,7 +1537,7 @@ msgid "Seguir a "
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/user/activity.php:30
-msgid "Noticias mejoradas por %"
+msgid "Noticias re:mediadas por %"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/user/activity.php:40
@@ -1557,7 +1557,7 @@ msgid "Ir a..."
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/user/activity.php:49
-msgid "Mejorar una noticia ahora"
+msgid "Re:mediar una noticia ahora"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/user/edit.php:9
@@ -1663,7 +1663,7 @@ msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/user/user.php:30
 #, php-format
-msgid "Noticias mejoradas por %s"
+msgid "Noticias re:mediadas por %s"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/user/user.php:109
@@ -1672,7 +1672,7 @@ msgid "re:medios por cada reporte"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/user/user.php:113
-msgid "¿Este usuario es más de ‘Fix’ o de ‘Reporte’? Este gráfico nos dice qué porcentaje de Fixes ha hecho por cada reporte aportado."
+msgid "¿Este usuario es más de ‘Reporte’ o de ‘Re:medio’? Este gráfico nos dice qué porcentaje de Reportes ha hecho por cada re:medio aportado."
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/user/user.php:120
@@ -1680,7 +1680,7 @@ msgid "Este gráfico nos muestra en qué momentos es más activo este usuario y 
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/user/user.php:126
-msgid "Fixes por fuentes"
+msgid "Reportes por medios"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/user/user.php:127
@@ -1689,7 +1689,7 @@ msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/user/user.php:131
 #, php-format
-msgid "No hay datos para mostrar, cuando %s haga algún fix o reporte, mostraremos las estadísticas."
+msgid "No hay datos para mostrar, cuando %s haga algún reporte o re:medio, mostraremos las estadísticas."
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/user/user.php:154
@@ -1702,11 +1702,11 @@ msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/user/user.php:163
 #, php-format
-msgid "No hay datos para mostrar, cuando %s haga algún fix o reporte, mostraremos sus noticias."
+msgid "No hay datos para mostrar, cuando %s haga algún reporte o re:medio, mostraremos sus noticias."
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/users/list_users.php:6
-msgid "buscar usuarios"
+msgid "buscar re:mediantes"
 msgstr ""
 
 #: /Users/dac/projects/remedia/application/views/users/list_users.php:13

@@ -42,7 +42,7 @@
 					}
 					function actions_by_month() {
 						var data = google.visualization.arrayToDataTable([
-							['<? _e('Mes'); ?>', '<? _e('Fixes'); ?>', '<? _e('Reportes'); ?>'],
+							['<? _e('Mes'); ?>', '<? _e('Reportes'); ?>', '<? _e('Re:medios'); ?>'],
 							<? foreach ($actions_by_month as $mes => $action) :?>
 								[<?= "'".date('F', mktime(0,0,0,$mes,1))."'";?>,<?= isset($action['fixes']) ? $action['fixes'] : 0; ?>,<?= isset($action['reports']) ? $action['reports'] : 0; ?>],
 							<? endforeach; ?>
@@ -97,7 +97,7 @@
 					<h2 class="title"><a href="<?= site_url($this->router->reverseRoute('reports-view', array('slug' => $report->slug))); ?>"><?=$report->title;?></a></h2>
 					<div class="report_meta">
 						<p class="authorship"><? _e('Enviado por'); ?> <a href="<?= site_url($this->router->reverseRoute('user-profile', array('username' => $report->user->username))); ?>"><?= $report->user->name; ?></a> <? _e('el'); ?> <?= $report->created_at->format('d/m/Y'); ?></p>
-						<p class="source"><? _e('Fuente'); ?>: <a href="<?= site_url($this->router->reverseRoute('source-profile', array('sitename' => $report->site))); ?>"><?= $report->site; ?></a></p>
+						<p class="source"><? _e('Medio'); ?>: <a href="<?= site_url($this->router->reverseRoute('source-profile', array('sitename' => $report->site))); ?>"><?= $report->site; ?></a></p>
 					</div>
 				</article>
 			<? endforeach; ?>

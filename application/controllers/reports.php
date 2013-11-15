@@ -14,8 +14,8 @@ class Reports extends MY_Controller {
 		$data['pagination_links'] = $this->pagination->create_links();
 		$data['page_title'] =  _('Portada - Más urgentes');
 		$data['title'] = _("Más urgentes");
-		$data['description'] =  _("Noticias para arreglar con más repercusión en este momento. RE:media es la herramienta que te permite mejorar las noticias, pidiendo que alguien las arregle, añadiendo más y mejor información o corrigiendo la existente.");
-		$data['subtitle'] =  _("Noticias para arreglar con más repercusión en este momento");
+		$data['description'] =  _("Noticias para re:mediar con más repercusión en este momento. RE:media es la herramienta que te permite mejorar las noticias, pidiendo que alguien las arregle, añadiendo más y mejor información o corrigiendo la existente.");
+		$data['subtitle'] =  _("Noticias para re:mediar con más repercusión en este momento");
 		$data['main_content'] = 'reports/list_reports';
 		$data['reports'] = Report::all(array(
 									'select' => '*, (karma*karma_value) as value',
@@ -57,10 +57,10 @@ class Reports extends MY_Controller {
 		$this->pagination->initialize($config);
 		$data['pagination_links'] = $this->pagination->create_links();
 		$data['page_title'] =  _('Portada - Pendientes');
-		$data['description'] =  _("Noticias enviadas que todavía tienen pocos o ningún reporte. RE:media es la herramienta que te permite mejorar las noticias, pidiendo que alguien las arregle, añadiendo más y mejor información o corrigiendo la existente.");
+		$data['description'] =  _("Noticias reportadas que aún no ha sido re:mediadas. RE:media es la herramienta que te permite mejorar las noticias, pidiendo que alguien las arregle, añadiendo más y mejor información o corrigiendo la existente.");
 		$data['main_content'] = 'reports/list_reports';
 		$data['title'] =  _("Pendientes");
-		$data['subtitle'] =  _("Noticias enviadas que todavía tienen pocos o ningún reporte");
+		$data['subtitle'] =  _("Noticias reportadas que aún no ha sido re:mediadas.");
 		$per_page = $this->pagination->per_page;
 		$offset = $this->pagination->per_page*($page-1);
 		$data['reports'] = Report::find_by_sql("SELECT r.*, (r.karma*r.karma_value) as value, count(rd.id) as subs

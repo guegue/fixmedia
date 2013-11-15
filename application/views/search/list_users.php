@@ -25,7 +25,7 @@
 							<a href="<?= site_url($this->router->reverseRoute('user-profile', array('username' => $user->username))); ?>"><?=get_avatar( $user, 150); ?></a>
 							<div class="data">
 						  		<h2 class="name"><a href="<?= site_url($this->router->reverseRoute('user-profile', array('username' => $user->username))); ?>"><?= $user->name; ?></a></h2>
-						  		<p class="when"><? _e('Mejorando noticias desde el'); ?> <?= date('d/m/Y', $user->created_on); ?></p>
+						  		<p class="when"><? _e('Re:mediando noticias desde el'); ?> <?= date('d/m/Y', $user->created_on); ?></p>
 						  		<p class="bio"><?= highlight_phrase($user->bio, $term, '<strong>' , '</strong>') ?></p>
 						 		<? if ($user->url) : ?><p class="url">Web: <a href="<?= $user->url ?>" target="_blank"><?= $user->url ?></a></p><? endif; ?>
 						 		<?= karma_graphic($user->karma); ?>

@@ -191,7 +191,7 @@ $('document').ready(function() {
 				if (data.valid) {
 					link.replaceWith($('<div class="fix_done">¡Hecho!</div>'));
 					$('.count-' + link.attr('id')).text(data.total_votes);
-					$('.action-title').html('<strong>¡Ya has hecho FIX!</strong> ¿Qué quieres hacer ahora?');
+					$('.action-title').html('<strong>¡Ya has reportado la noticia!</strong> ¿Qué quieres hacer ahora?');
 					$(".action-button.share").effect("pulsate", { times:4 }, 300);
 				} else {
 					alert(data.error);

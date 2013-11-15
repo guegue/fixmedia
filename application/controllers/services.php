@@ -131,8 +131,8 @@ class Services extends MY_Controller {
             $report = Report::find_by_slug($slug);
             if ($report) :
                if ($fix) :
-                  $data['title'] =  _("¡Acabas de mejorar esta noticia!");
-                  $data['content'] =  _("Enséñaselo a tus amigos para que valoren positivamente tu reporte");
+                  $data['title'] =  _("¡Acabas de re:mediar esta noticia!");
+                  $data['content'] =  _("Compartelo con tu gente");
                else :
                   $data['title'] =  _("¡Compártela!");
                   $data['content'] =  _("Cuanta más gente conozca esta noticia y haga FIX en ella, más posibilidades de arreglarla entre todos");
@@ -215,7 +215,7 @@ class Services extends MY_Controller {
       public function set_images() {
          if ($this->input->is_cli_request() ) {
             $this->db->select('id, url, screenshot');
-            $this->db->where("screenshot IS NULL OR screenshot LIKE ''");
+            $this->db->where("screenshot IS NULL OR screenshot = '' OR screenshot = 'ERROR'");
             $query = $this->db->get('reports');
 
             $path = getcwd() . '/images/sources/';

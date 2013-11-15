@@ -1,6 +1,6 @@
 
 <div class="row wrap_title">
-	<label class="label" for="title"><? _e('¿Qué quieres arreglar?'); ?> <span class="tip"><? _e('Dilo en un titular, recuerda que al final puedes seguir añadiendo reportes a esta misma noticia'); ?></span></label>
+	<label class="label" for="title"><? _e('¿Qué quieres re:mediar?'); ?> <span class="tip"><? _e('Dilo en un titular, recuerda que al final puedes seguir añadiendo re:medios a esta misma noticia'); ?></span></label>
 	<input type="text" id="title_<?=$count;?>" name="title[]"  class="text" maxlength="120" />
 	<span class="help">
 		<? if ($type==1) : ?>
