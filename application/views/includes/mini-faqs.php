@@ -1,13 +1,13 @@
 	<section class="block">
 		<h3 class="title"><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('que-es-remedia')))); ?>"><? _e('Qué'); ?></a></h3>
 		<div class="side_text">
-			<p><? _e('RE:media es una plataforma para la edición colabortativa de noticias, para que cualquier persona pueda corregir o añadir información a una noticia publicada por medios digitales de prensa escrita. <br/><a href="http://remedia.la/estaticas/que-es-remedia">+ info</a>'); ?> </p>
+			<p><? _e('RE:media es una plataforma para la edición colabortativa de noticias, para que cualquier persona pueda corregir o añadir información a una noticia publicada por medios digitales de prensa escrita.'); ?> </p>
 		</div>
 	</section>
 	<section class="block">
-		<h3 class="title"><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('como-funciona')))); ?>"><? _e('Cómo'); ?></a></h3>
+		<h3 class="title"><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('como-usar')))); ?>"><? _e('Cómo'); ?></a></h3>
 		<div class="side_text">
-			<p><? _e('Re:mediar una noticia es muy sencillo: arrastra el <a href="http://remedia.la/estaticas/marcador">botón de RE:media</a> a la ventana de tu navegador. Cuando leas una noticia en Internet que necesite un re:medio, haz clic en el botón y sigue los pasos que se irán indicando. <br/><a href="http://remedia.la/estaticas/como-funciona">+ info</a>'); ?></p>
+			<p><? _e('Re:mediar una noticia es muy sencillo: arrastra el <a href="http://remedia.la/estaticas/marcador">botón de RE:media</a> a la ventana de tu navegador. Cuando leas una noticia en Internet que necesite un re:medio, haz clic en el botón y sigue los pasos que se irán indicando. <br/><a href="http://remedia.la/estaticas/como-usar">+ info</a>'); ?></p>
 		</div>
 	</section>
 		<section class="block">

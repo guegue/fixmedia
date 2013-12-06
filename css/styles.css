@@ -423,7 +423,7 @@ a:hover {text-decoration:underline;}
 		color:#FFFFFF;
 		font-weight: bold;
 		font-style: italic;
-		font-size: 13px;
+		font-size: 12.5px;
 		text-align: center;
 		line-height: 13px;
 		padding:10px 3px;
@@ -1310,7 +1310,6 @@ a:hover {text-decoration:underline;}
 	}
 
 	#sidebar .counter .wrap-fix .button {
-		width:67px;
 		font-style:normal;
 		font-size:25px;
 		margin:0px auto;
@@ -1513,7 +1512,7 @@ a:hover {text-decoration:underline;}
 		.profile.source #sidebar .fix_reports_counters .fixes {border-color:#62A2B6}
 		.profile.source #sidebar .fix_reports_counters .reports {border-color:#A3D1DF}
 	#sidebar .fix_reports_counters .count {
-		font-size:40px;
+		font-size:50px;
 		line-height:55px;
 	}
 	#sidebar .fix_reports_counters .reports .count {font-size:50px;}
@@ -1594,7 +1593,7 @@ input.button {height:40px;}
 	.button.icon:hover {
 }
 	.button.icon.share {
-		color:#999999;
+		color:#FFF;
 		background-position: right -110px;
 		border-color:#CCCCCC;
 	}
@@ -2187,7 +2186,6 @@ a.bookmarklet {
 	    border:1px solid ##C00;
 	    border-radius: 3px;
 	    color:#ffffff !important;
-	    text-transform:lowercase;
 	    font-size:14px;
 	    margin-right:5px;
 	}

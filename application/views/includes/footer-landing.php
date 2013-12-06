@@ -6,11 +6,12 @@
 				<a href="http://nxtmdia.com"><img alt="Nxtmdia" src="<?= base_url('images/logos/logo-nxtmdia.jpg'); ?>"/></a>
 			</div>
 			<div class="cofin">
-				<h3 class="title"><? _e('Cofinanciadores destacados'); ?>:</h3>
+             <a href="http://guegue.com" target="_blank"><img alt="GüeGüe Comunicaciones" src="<?= base_url('images/logos/logoguegue.png'); ?>"/></a>
+				<!--<h3 class="title"><? _e('Cofinanciadores destacados'); ?>:</h3>
 				<a href="http://agitalo.es/"><img alt="Agitalo 3.0" src="<?= base_url('images/logos/logo-agitalo.jpg'); ?>"/></a>
 				<a href="http://formadepie.org/"><img alt="Forma de pie" src="<?= base_url('images/logos/logo-formadepie.jpg'); ?>"/></a>
 				<a href="http://www.irekia.euskadi.net/"><img alt="Irekia" src="<?= base_url('images/logos/logo-irekia.jpg'); ?>"/></a>
-				<a href="http://linkatu.net/"><img alt="Linkatu" src="<?= base_url('images/logos/logo-linkatu.jpg'); ?>"/></a>
+				<a href="http://linkatu.net/"><img alt="Linkatu" src="<?= base_url('images/logos/logo-linkatu.jpg'); ?>"/></a>-->
 			</div>
 		</div>
 	</section>

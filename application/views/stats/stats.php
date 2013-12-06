@@ -7,13 +7,14 @@
 					<? _e('noticias'); ?>
 				</div>
 				<div class="indicator">
-					<span class="counter"><?= $total_reports ?></span>
-					<? _e('re:medios'); ?>
-				</div>
-				<div class="indicator">
 					<span class="counter"><?= $total_fixes ?></span>
 					<? _e('reportes'); ?>
 				</div>
+				<div class="indicator">
+					<span class="counter"><?= $total_reports ?></span>
+					<? _e('re:medios'); ?>
+				</div>
+				
 				<div class="indicator">
 					<span class="counter"><?= $total_users ?></span>
 					<? _e('re:mediantes'); ?>
@@ -23,18 +24,18 @@
 					<? _e('medios'); ?>
 				</div>
 			</section>
-			<aside class="indicators-explanation"><? _e('Las cifras globales de Fixmeda desde el día de su lanzamiento'); ?></aside>
+			<aside class="indicators-explanation"><? _e('Las cifras globales de RE:media desde el día de su lanzamiento'); ?></aside>
 		</div>
 		<div class="block-wrap clearfix">
-			<h1 class="title"><? _e('Medios'); ?></h2>
+			<h2 class="title"><? _e('Medios'); ?></h2>
 			<p class="sub_title sep"><? _e('Los medios más importantes en RE:media en los últimos 7 días'); ?></p>
 			<section id="chart_1" class="chart_full"></section>
 			<aside class="chart-explanation top">
-				<p class="cex_text"><? _e('Cada globo representa un medio (diario, blog, etc.). Cuanto más alineado esté a la derecha, es que ha recibido más reportes. Cuanto más arriba esté, es que ha recibido más re:medios. Cuanto mayor sea el tamaño del globo, es que tiene el total de noticias tienen más importancia dentro de RE:media.'); ?></p>
+				<p class="cex_text"><? _e('Cada globo representa un medio (diario, semanal, revista...). Cuanto más alineado esté a la derecha, es que ha recibido más reportes. Cuanto más arriba esté, es que ha recibido más re:medios. Cuanto mayor sea el tamaño del globo, es que tiene el total de noticias tienen más importancia dentro de RE:media.'); ?></p>
 			</aside>
 		</div>
 		<div class="block-wrap clearfix">
-			<h1 class="title"><? _e('Reportes'); ?></h2>
+			<h2 class="title"><? _e('Reportes'); ?></h2>
 			<p class="sub_title sep"><? _e('Reportes acumulados en los últimos 7 días'); ?></p>
 			<div class="wrapin clearfix">
 				<section id="chart_2" class="chart_2_3"></section>
@@ -45,16 +46,16 @@
 			</aside>
 		</div>
 		<div class="block-wrap clearfix">
-			<h1 class="title"><? _e('Re:medios'); ?></h2>
+			<h2 class="title"><? _e('Re:medios'); ?></h2>
 			<p class="sub_title sep"><? _e('Re:medios acumulados en los últimos 7 días'); ?></p>
 			<div class="wrapin clearfix">
 				<section id="chart_3" class="chart_2_3"></section>
 				<section id="chart_5" class="chart_1_3"></section>
 			</div>
 			<aside class="wrapin chart-explanation top">
-				<p class="cex_text"><? _e('¿Cuántos reportes han enviado los usuarios esta última semana? De ellos, ¿cuántos han sido ampliaciones y cuántos, correcciones?'); ?></p>
+				<p class="cex_text"><? _e('¿Cuántos re:medios han enviado las y los re:mediantes esta última semana? De ellos, ¿cuántos han sido ampliaciones y cuántos correcciones?'); ?></p>
 			</aside>
-			<div class="wrapin clearfix">
+			<!--<div class="wrapin clearfix">
 				<section id="chart_6" class="chart_2_3"></section>
 				<aside class="chart-explanation cex_1_3">
 					<h3 class="cex_title"><? _e('Tipos de correcciones'); ?></h3>
@@ -67,7 +68,7 @@
 					<h3 class="cex_title"><? _e('Tipos de amplaciones'); ?></h3>
 					<p class="cex_text"><? _e('¿Qué tipo de ampliaciones se han hecho esta última semana?'); ?></p>
 				</aside>
-			</div>
+			</div>-->
 		</div>
 
 	   	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -77,7 +78,7 @@
 			function draw_chart_1() {
 			    // Create and populate the data table.
 			    var data = google.visualization.arrayToDataTable([
-			      	['ID', '<? _e('Número de reportes'); ?>', '<? _e('Número de re:medios'); ?>', '<? _e('Medio'); ?>', '<? _e('Reputación'); ?>'],
+			      	['ID', '<? _e('Número de re:medios'); ?>', '<? _e('Número de reportes'); ?>', '<? _e('Medio'); ?>', '<? _e('Reputación'); ?>'],
 			      	<? foreach ($global as $site) :?>
 						[<?= "'". substr($site->site, 0, 3) ."'";?>, <?=$site->reportes?>, <?=$site->votos?>, <?= "'". $site->site ."'";?>,  <?=$site->karma?>],
 					<? endforeach; ?>
@@ -98,7 +99,7 @@
 			}
 			function draw_chart_2() {
 			  var data = google.visualization.arrayToDataTable([
-			    ['Día', 'Re:medios'],
+			    ['Día', 'Reportes'],
 			    <? foreach ($fixes_by_days as $fix) : ?>
 			    	['<?= $fix->fecha; ?>', <?= $fix->fixes; ?>],
 			    <? endforeach; ?>
@@ -113,14 +114,14 @@
 			}
 			function draw_chart_3() {
 			  var data = google.visualization.arrayToDataTable([
-			    ['Día', 'Reportes'],
+			    ['Día', 'Re:medios'],
 			    <? foreach ($reports_by_days as $rep) : ?>
 			    	['<?= $rep->fecha; ?>', <?= $rep->total; ?>],
 			    <? endforeach; ?>
 			  ]);
 			  var chart = new google.visualization.LineChart(document.getElementById('chart_3'));
 			  chart.draw(data, {
-			  				title: '<? _e('Número de reportes en los últimos 7 días'); ?>',
+			  				title: '<? _e('Número de re:medios en los últimos 7 días'); ?>',
 			                vAxis: {minValue: 0},
 			              	hAxis: {minValue: 0},
 			              	chartArea:{left:30,top:20,width:"500", height:"300"}}
@@ -151,7 +152,7 @@
 
 			  // Create and draw the visualization.
 			  new google.visualization.PieChart(document.getElementById('chart_5')).
-			      draw(data, {title:"<? _e('Tipos de reportes en los últimos 7 días'); ?>",
+			      draw(data, {title:"<? _e('Tipos de re:medios en los últimos 7 días'); ?>",
 			  chartArea:{left:20,top:20,width:"280", height:"300"}});
 			}
 

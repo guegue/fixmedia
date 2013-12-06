@@ -35,9 +35,9 @@ class Reports extends MY_Controller {
 		$this->pagination->initialize($config);
 		$data['pagination_links'] = $this->pagination->create_links();
 		$data['page_title'] =  _('Portada - Recientes');
-		$data['description'] =  _("Últimas noticias enviadas. RE:media es la herramienta que te permite mejorar las noticias, pidiendo que alguien las arregle, añadiendo más y mejor información o corrigiendo la existente.");
+		$data['description'] =  _("Últimas noticias reportadas. RE:media es la herramienta que te permite mejorar las noticias, pidiendo que alguien las arregle, añadiendo más y mejor información o corrigiendo la existente.");
 		$data['title'] =  _("Recientes");
-		$data['subtitle'] =  _("Últimas noticias enviadas");
+		$data['subtitle'] =  _("Últimas noticias reportadas");
 		$data['main_content'] = 'reports/list_reports';
 		$data['reports'] = Report::all(array(
 									'select' => '*, (karma*karma_value) as value',
@@ -102,7 +102,7 @@ class Reports extends MY_Controller {
 							'vote_value' => 1,
 							'ip' => $this->input->ip_address()));
 					$data['report'] = $report;
-					$data['page_title'] =  _('Noticia enviada');
+					$data['page_title'] =  _('Noticia reportada');
 					$data['main_content'] = 'reports/sent_url_report';
 				else : // Si existe, hacemos fix y redirigimos a la página del reporte
 					$vote = Vote::create(array(
@@ -139,7 +139,7 @@ class Reports extends MY_Controller {
 				$data['page_title'] =  _('Completa el reporte');
 				$data['main_content'] = 'reports/complete_report';
 			else : // si se va a editar el envío
-				$data['page_title'] =  _('Modificar reporte');
+				$data['page_title'] =  _('Modifica el reporte');
 				$data['main_content'] = 'reports/edit_report';
 				$data['reports_types_tree'] = Reports_type::find_all_by_parent(0);
 				$data['report_sent'] = $report;
@@ -169,7 +169,7 @@ class Reports extends MY_Controller {
 			$data['reports_types_tree'] = Reports_type::find_all_by_parent(0);
 			$data['report_sent'] = Report::find($this->input->post('report_id', TRUE));
 			$data['report'] = $this->input->post(NULL, TRUE);
-			$data['page_title'] =  _('Corrige el reporte');
+			$data['page_title'] =  _('Corrige el re:medio');
 			$data['main_content'] = 'reports/error_report';
 		else :
 			$data['report'] = $this->input->post(NULL, TRUE);
@@ -190,7 +190,7 @@ class Reports extends MY_Controller {
 			$data['types'] = $types;
 			$data['report_sent'] = Report::find($this->input->post('report_id', TRUE));
 
-			$data['page_title'] =  _('Previsualización del reporte');
+			$data['page_title'] =  _('Previsualización del re:nedio');
 			$data['main_content'] = 'reports/preview_report';
 		endif;
 			$this->load->view('includes/template', $data);

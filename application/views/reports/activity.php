@@ -3,14 +3,14 @@
 		<?php $this->load->view('includes/report-info'); ?>
 		<section class="tabs notabs">
         	<ul class="tabs_items">
-				<li class=""><a href="<?= site_url($this->router->reverseRoute('reports-view', array('slug' => $report->slug))); ?>"><? _e('Reportes'); ?></a></li>
-				<li class="ui-state-active"><a href="<?= site_url($this->router->reverseRoute('reports-activity', array('slug' => $report->slug))); ?>"><? _e('Actividad'); ?></a></li>
-			</ul>
+				<li class="ui-state-active"><a href="<?= site_url($this->router->reverseRoute('reports-activity', array('slug' => $report->slug))); ?>"><? _e('Reportes'); ?></a></li>
+				<li class=""><a href="<?= site_url($this->router->reverseRoute('reports-view', array('slug' => $report->slug))); ?>"><? _e('RE:medios'); ?></a></li>
+				</ul>
         </section>
-		<h2 class="action_title"><strong><? _e('Están contribuyendo a mejorar esta noticia'); ?></strong> <? _e('Listado de re:mediantes corrigiendo y/o ampliando'); ?></h2>
+		<h2 class="action_title"><strong><? _e('Estas personas opinan que esta noticia necesita un re:medio'); ?></strong></h2>
 		<? if (count($reporting_users)) : ?>
 		<section class="reporting_users search profile clearfix">
-			<h3 class="section_title"><? _e('Re:mediantes que han reportado'); ?></h3>
+			<h3 class="section_title"><? _e('Re:mediantes que han reportado y re:mediado'); ?></h3>
 			<? foreach ($reporting_users as $user) :  ?>
 				<article class="user_info clearfix">
 						<a class="avatar_wrap" href="<?= site_url($this->router->reverseRoute('user-profile', array('username' => $user->username))); ?>"><?=get_avatar( $user, 150);?></a>
@@ -30,7 +30,7 @@
 		<? endif; ?>
 		<? if (count($reporting_votes_users)) : ?>
 		<section class="reporting_votes_users clearfix">
-			<h3 class="section_title"><? _e('Usuarios que han valorado positivamente un reporte'); ?></h3>
+			<h3 class="section_title"><? _e('Re:mediantes que han valorado positivamente un re:medio'); ?></h3>
 			<ul class="users_list medium">
 			<? foreach ($reporting_votes_users as $user) :  ?>
 				<li class="user_info clearfix">
@@ -48,7 +48,7 @@
 		<? endif; ?>
 		<? if (count($only_fixes_users)) : ?>
 		<section class="only_fixes_users clearfix">
-			<h3 class="section_title"><? _e('Usuarios que solo han hecho reporte'); ?></h3>
+			<h3 class="section_title"><? _e('Re:mediantes que han reportado'); ?></h3>
 			<ul class="users_list small">
 			<? foreach ($only_fixes_users as $user) :  ?>
 				<li class="user_info clearfix">
@@ -80,28 +80,27 @@
 			</div>
 			<div class="wrap-fix">
 				<? if ($logged_in && !$report->is_voted($the_user->id)) : ?>
-					<a title="<? _e('Haciendo Re:medie estás diciendo que esta noticia es mejorable en algún aspecto'); ?>" href="<?php echo site_url(array('services/fix_vote',$report->id)); ?>" id="vote-<?= $report->id ?>" class="button icon fixit fix_vote">
-						<? _e('RE:MEDIE'); ?>
+					<a title="<? _e('Reportando esta noticia, indicas que es mejorable en algún aspecto'); ?>" href="<?php echo site_url(array('services/fix_vote',$report->id)); ?>" id="vote-<?= $report->id ?>" class="button icon fixit fix_vote">
+						<? _e('Reportar'); ?>
 					</a>
 				<? elseif (!$logged_in) : ?>
-					<a title="<? _e('Haciendo Re:medie estás diciendo que esta noticia es mejorable en algún aspecto'); ?>" href="<?php echo base_url("index.php/auth/login"); ?>" id="vote-<?= $report->id ?>" class="button icon fixit">
-						<? _e('RE:MEDIE'); ?>
+					<a title="<? _e('Reportando esta noticia, indicas que es mejorable en algún aspecto'); ?>" href="<?php echo base_url("index.php/auth/login"); ?>" id="vote-<?= $report->id ?>" class="button icon fixit">
+						<? _e('Reportar'); ?>
 					</a>
 				<? elseif ($logged_in && $report->is_voted($the_user->id)) : ?>
-					<div class="fix_done"><? _e('¡Hecho!'); ?></div>
 				<? endif; ?>
 			</div>
 		</div>
 		<? if ($logged_in && $report->is_voted($the_user->id)) : ?>
-			<span class="action-title"><strong><? _e('¡Ya has reportado la noticia!'); ?></strong> <? _e('¿Qué quieres hacer ahora?'); ?></span>
+			<span class="action-title"><strong><? _e('¿Qué quieres hacer?'); ?></strong></span>
 		<? else: ?>
 			<span class="action-title"><? _e('También puedes...'); ?></span>
 		<? endif; ?>
 		<? $doreport = isset($doreport) ? 'do' : '';?>
 		<input type="hidden" id="url_report" value="<?=site_url($this->router->reverseRoute('reports-view' , array('slug' => $report->slug)));?>"/>
-		<a href="<?= site_url('services/share/' . $report->slug . '/' . $doreport); ?>" class="action-button share <?= (isset($autoshare) ? 'autoload' : ''); ?>"><? _e('Compártela'); ?></a>
+		<a href="<?= site_url('services/share/' . $report->slug . '/' . $doreport); ?>" class="action-button share <?= (isset($autoshare) ? 'autoload' : ''); ?>"><? _e('Compartir'); ?></a>
 		<hr class="sep"/>
-		<a href="<?= site_url($this->router->reverseRoute('reports-send' , array('id' => $report->id))); ?>" class="action-button add_report"><? _e('OTRO RE:MEDIO'); ?></a>
+		<a href="<?= site_url($this->router->reverseRoute('reports-send' , array('id' => $report->id))); ?>" class="action-button add_report"><? _e('Re:mediar'); ?></a>
 
 	</aside>
 </div>

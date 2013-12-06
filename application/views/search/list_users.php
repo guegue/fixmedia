@@ -7,8 +7,8 @@
         <section class="tabs notabs">
         	<ul class="tabs_items">
 				<li class=""><a href="<?= site_url($this->router->reverseRoute('search')); ?>?q=<?= isset($term) ? $term : ''; ?>"><? _e('Noticias'); ?></a></li>
-				<li class=""><a href="<?= site_url($this->router->reverseRoute('search-reports')); ?>?q=<?= isset($term) ? $term : ''; ?>"><? _e('Reportes'); ?></a></li>
-				<li class="ui-state-active"><a href="<?= site_url($this->router->reverseRoute('search-users')); ?>?q=<?= isset($term) ? $term : ''; ?>"><? _e('Usuarios'); ?></a></li>
+				<li class=""><a href="<?= site_url($this->router->reverseRoute('search-reports')); ?>?q=<?= isset($term) ? $term : ''; ?>"><? _e('Re:medios'); ?></a></li>
+				<li class="ui-state-active"><a href="<?= site_url($this->router->reverseRoute('search-users')); ?>?q=<?= isset($term) ? $term : ''; ?>"><? _e('Re:mediantes'); ?></a></li>
 			</ul>
         </section>
         <section class="order clearfix">
@@ -39,7 +39,7 @@
 					</article>
 				<? endforeach; ?>
 			<? else : ?>
-			<p class="sub_title"><? _e('No hay usuarios para la cadena de búsqueda'); ?></p>
+			<p class="sub_title"><? _e('No hemos encontrado re:mediantes con esos criterios de búsqueda'); ?></p>
 			<? endif; ?>
 		</section>
 		<div class="pagination clearfix"><?=$pagination_links;?></div>

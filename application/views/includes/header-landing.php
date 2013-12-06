@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <link href='http://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>
-	<title><?=$page_title?> - RE:media</title>
+	<title>RE:media - <?=$page_title?></title>
     <link rel="shortcut icon" href="<?php echo base_url(); ?>/images/favicon.png">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -21,6 +21,6 @@
 </head>
 <body class="landing">
     <div id="head" class="clearfix">
-        <p class="logo"><a href="<?php echo base_url(); ?>"><? _e('Remedia.la, arregla las noticias'); ?></a></p>
+        <p class="logo"><a href="<?php echo base_url(); ?>"><? _e('RE:media, mejora las noticias'); ?></a></p>
     </div>
 

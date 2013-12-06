@@ -8,7 +8,10 @@
 		<p>Si utilizas RE:media, eres un re:mediante, un miembro de la comunidad.</p>
 
 		<h2>Cómo utilizo RE:media</h2>
-		<p>Una vez te hayas registrado en la plataforma, lo más sencillo es que instales el botón RE:media en tu navegador. Solamente tienes que arrastrarlo desde la página de RE:media hasta la ventana de Firefox, Chrome, Explorer o cualquier otro programa que uses para navegar por Internet. Cuando leas una noticia que necesite un re:medio, haz clic en el botón y sigue los pasos que se te irán indicando. <a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('como-funciona')))); ?>"><? _e('+ info'); ?></a></p>
+		<p>Una vez te hayas registrado en la plataforma, lo más sencillo es que instales el marcador RE:media en tu navegador. Solamente tienes que arrastrarlo desde la página de RE:media hasta la ventana de Firefox, Chrome, Explorer o cualquier otro programa que uses para navegar por Internet. Cuando leas una noticia que necesite un re:medio, haz clic en el botón y sigue los pasos que se te irán indicando. <a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('como-usar')))); ?>"><? _e('+ info'); ?></a></p>
+        
+        <h2>No sé dónde colocar el marcador RE:media</h2>
+        <p><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('navegadores')))); ?>"><? _e('Hemos hecho esta breve guía que quizás te ayude'); ?></a>.</p>
 
 		<h2>Qué es un reporte</h2>
 		<p>Reportar una noticia significa llevarla a la plataforma RE:media para corregirla, ampliarla o solicitar que lo hagan otras personas. Si reportas una noticia antes que nadie, te anotarás un punto de descubrimiento. Si alguien ya reportó la noticia antes que tú, puedes sumar tu reporte. Tantos reportes tiene una noticia, tantas personas consideran que necesita un re:medio.</p>
@@ -27,14 +30,16 @@
 
 		<h2>Qué otras cosas puedo hacer en RE:media</h2>
 		<p>Puedes compartir tus reportes y re:medios en las redes sociales. También puedes comentar los reportes y re:medios de otros miembros de la comunidad.</p>
+        
+        <h2>¿Te quedan dudas?</h2>
+        <p>¿Has detectado un error, hay algo que falla, que falta o que no te gusta? Por favor, cuentanoslo a través de <a href="http://remedia.la/estaticas/problemas">este formulario</a></p> 
 
 <p class="nav">Ir a...</p>
 				<ul>
-				<li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('que-es-remedia')))); ?>"><? _e('Qué es RE:media'); ?></a></li>
-				<li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('como-funciona')))); ?>"><? _e('Cómo funciona'); ?></a></li>
-				<li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' => 'equipo'))); ?>">Equipo</a></li>
+				<li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('como-usar')))); ?>"><? _e('Cómo usar RE:media'); ?></a></li>
+				<li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' => 'equipo'))); ?>"><? _e('Equipo'); ?></a></li>
 				<li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('contacto')))); ?>"><? _e('Contacto'); ?></a></li>
-				<li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('aviso-legal')))); ?>"><? _e('Información legal'); ?></a></li>
+				<li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('aviso-legal')))); ?>"><? _e('Aviso legal'); ?></a></li>
 				</ul>
 
 		

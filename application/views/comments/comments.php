@@ -48,7 +48,7 @@
 		</ul>
 		<? else : ?>
 			</ul>
-			<p class="login-comment"><? _e('Para poder comentar necesitas estár logueado...'); ?> <a class="log_in" href="<?= site_url($this->router->reverseRoute('login')) . "?prev=" .  $this->router->reverseRoute('reports-view', array('slug' => $subreport->report->slug)) . '&hash=comment-form-' . $subreport->id; ?>"><? _e('Inicia sesión'); ?></a></p>
+			<p class="login-comment"><? _e('Para poder comentar necesitas haber iniciado sesión'); ?> <a class="log_in" href="<?= site_url($this->router->reverseRoute('login')) . "?prev=" .  $this->router->reverseRoute('reports-view', array('slug' => $subreport->report->slug)) . '&hash=comment-form-' . $subreport->id; ?>"><? _e('Inicia sesión'); ?></a></p>
 		<? endif; ?>
 
 </div>

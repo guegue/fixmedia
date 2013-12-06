@@ -1,18 +1,18 @@
 <div id="container">
 	<div id="content">
 
-		<h3>Users</h3>
-		<p>Below is a list of the users.</p>
+		<h3>Re:mediantes</h3>
+		<p>Debajo, una lista de las y los re:mediantes.</p>
 
 		<div id="infoMessage"><?php echo $message;?></div>
 
 		<table cellpadding=0 cellspacing=10>
 			<tr>
-				<th>Username</th>
-				<th>Name</th>
-				<th>Email</th>
-				<th>Groups</th>
-				<th>Status</th>
+				<th>Re:mediante</th>
+				<th>Nombre</th>
+				<th>Correo</th>
+				<th>Grupos</th>
+				<th>Estatus</th>
 			</tr>
 			<?php foreach ($users as $user):?>
 				<tr>
@@ -29,7 +29,7 @@
 			<?php endforeach;?>
 		</table>
 
-		<p><a href="<?php echo site_url('auth/create_user');?>">Create a new user</a></p>
+		<p><a href="<?php echo site_url('auth/create_user');?>">Crear una nueva cuenta de re:mediante</a></p>
 
 	</div>
 </div>

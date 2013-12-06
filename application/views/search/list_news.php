@@ -7,8 +7,8 @@
         <section class="tabs notabs">
         	<ul class="tabs_items">
 				<li class="ui-state-active"><a href="<?= site_url($this->router->reverseRoute('search')); ?>?q=<?= isset($term) ? $term : ''; ?>"><? _e('Noticias'); ?></a></li>
-				<li class=""><a href="<?= site_url($this->router->reverseRoute('search-reports')); ?>?q=<?= isset($term) ? $term : ''; ?>"><? _e('Reportes'); ?></a></li>
-				<li class=""><a href="<?= site_url($this->router->reverseRoute('search-users')); ?>?q=<?= isset($term) ? $term : ''; ?>"><? _e('Usuarios'); ?></a></li>
+				<li class=""><a href="<?= site_url($this->router->reverseRoute('search-reports')); ?>?q=<?= isset($term) ? $term : ''; ?>"><? _e('Re:medios'); ?></a></li>
+				<li class=""><a href="<?= site_url($this->router->reverseRoute('search-users')); ?>?q=<?= isset($term) ? $term : ''; ?>"><? _e('Re:mediantes'); ?></a></li>
 			</ul>
         </section>
         <section class="order clearfix">
@@ -29,19 +29,19 @@
 								<a href="<?=$report->url; ?>" target="_blank"><img src="<?=base_url('images/sources/thumb-home-' . $report->id . '.png'); ?>" width="150" alt="<? printf(_('Captura de %s'), $report->title); ?>"  title="karma <?= $report->karma ?> / coef <?= $report->karma_value ?> / valor <?= $report->karma*$report->karma_value?>"/></a>
 							<? endif; ?>
 							<div class="clearfix fix_reports_counters">
-								<div class="fixes"><span class="count"><?= $report->votes_count; ?></span> <? _e('fixes'); ?></div>
-								<div class="reports"><span class="count"><?= count($report->data); ?></span> <? _e('reportes'); ?></div>
+								<div class="fixes"><span class="count"><?= $report->votes_count; ?></span> <? _e('reportes'); ?></div>
+								<div class="reports"><span class="count"><?= count($report->data); ?></span> <? _e('re:medios'); ?></div>
 							</div>
 						</div>
 						<h2 class="title"><a href="<?= site_url($this->router->reverseRoute('reports-view', array('slug' => $report->slug))); ?>"><?=$report->title;?></a></h2>
 						<div class="report_meta">
-							<p class="authorship"><? _e('Enviado por'); ?> <a href="<?= site_url($this->router->reverseRoute('user-profile', array('username' => $report->user->username))); ?>"><?= $report->user->name; ?></a> <? _e('el'); ?> <?= $report->created_at->format('d/m/Y'); ?></p>
-							<p class="source"><? _e('Fuente'); ?>: <a href="<?= site_url($this->router->reverseRoute('source-profile', array('sitename' => $report->site))); ?>"><?= $report->site; ?></a></p>
+							<p class="authorship"><? _e('Reportado por'); ?> <a href="<?= site_url($this->router->reverseRoute('user-profile', array('username' => $report->user->username))); ?>"><?= $report->user->name; ?></a> <? _e('el'); ?> <?= $report->created_at->format('d/m/Y'); ?></p>
+							<p class="source"><? _e('Medio'); ?>: <a href="<?= site_url($this->router->reverseRoute('source-profile', array('sitename' => $report->site))); ?>"><?= $report->site; ?></a></p>
 						</div>
 					</article>
 				<? endforeach; ?>
 			<? else : ?>
-			<p class="sub_title"><? _e('No hay noticias para la cadena de búsqueda'); ?></p>
+			<p class="sub_title"><? _e('No hemos encontrado noticias con esos criterios de  búsqueda'); ?></p>
 			<? endif; ?>
 		</section>
 		<div class="pagination clearfix"><?=$pagination_links;?></div>

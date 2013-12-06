@@ -621,6 +621,7 @@ class Auth extends MY_Controller {
 			// do we really want to deactivate?
 			if ($this->input->post('confirm') == 'yes')
 			{
+				$this->data['user'] = $this->ion_auth->user($id)->row();
 				// do we have a valid request?
 				if ($this->_valid_csrf_nonce() === FALSE || $id != $this->input->post('id'))
 				{
@@ -631,6 +632,8 @@ class Auth extends MY_Controller {
 				if ($this->ion_auth->logged_in() && $this->ion_auth->is_admin())
 				{
 					$this->ion_auth->deactivate($id);
+					$this->load->view('auth/deactivate_user', $this->data);
+					#$this->load->view('includes/template', $this->data);
 				}
 			}
 

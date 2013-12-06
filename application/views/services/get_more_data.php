@@ -1,5 +1,5 @@
 <div class="report_data">
-	<p><label class="label">Elige el tipo de reporte</label> 
+	<p><label class="label">Elige el tipo de re:medio</label> 
 		<div class="wrap_types clearfix">
 		<? foreach ($reports_types_tree as $report_type) : ?>
 			<span class="wrap_type">

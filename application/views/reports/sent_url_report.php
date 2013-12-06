@@ -7,30 +7,35 @@
 			</div>
 			<h1 class="title"><?=$report->title;?></h1>
 			<div class="report_meta">
-				<p class="authorship"><? _e('Enviado por '); ?><a href="<?= site_url($this->router->reverseRoute('user-profile', array('username' => $report->user->name))); ?>"><?= $report->user->name; ?></a> <? _e('el'); ?> <?= $report->created_at->format('d/m/Y'); ?></p>
-				<p class="source"><? _e('Fuente'); ?>: <?= $report->site; ?></p>
+				<p class="authorship"><? _e('Reportado por '); ?><a href="<?= site_url($this->router->reverseRoute('user-profile', array('username' => $report->user->name))); ?>"><?= $report->user->name; ?></a> <? _e('el'); ?> <?= $report->created_at->format('d/m/Y'); ?></p>
+				<p class="source"><? _e('Medio'); ?>: <?= $report->site; ?></p>
 			</div>
 			<? if ($logged_in && $report->is_removable($the_user->id)) : ?>
 				<p class="remove-report"><? _e('Esta noticia la has reportado tú y todavía puedes eliminarla.'); ?> <a href="<?= site_url('reports/delete/' . $report->id); ?>"><? _e('Eliminar noticia'); ?></a></p>
-			<? endif; ?>
+                <? endif; ?>
 		</section>
 
 		<section class="sending_actions clearfix">
-			<h2 class="action_title"><? _e('Ya has hecho fix a esta noticia.'); ?> <strong><? _e('¿Qué quieres hacer con ella ahora?'); ?></strong></h2>
+			<h2 class="action_title"><? _e('Ya has reportado esta noticia.'); ?> <strong><? _e('¿Qué quieres hacer con ella ahora?'); ?></strong></h2>
 
 			<a href="<?= site_url($this->router->reverseRoute('reports-view-share', array('slug' => $report->slug, 'share' => 'share'))); ?>" class="button icon share">
-			<? _e('Compártela'); ?> <span class="subtitle"><? _e('Para que la comunidad la re:medie'); ?></span>
+			<? _e('Compartir'); ?>
 			</a>
 
 			<a href="<?= site_url($this->router->reverseRoute('reports-send' , array('id' => $report->id))); ?>" class="button submit icon add_report">
-			<? _e('RE:MÉDIALA'); ?> <span class="subtitle"><? _e('ahorita mismo'); ?></span>
-			</a>
+			<? _e('Re:mediar'); ?></a>
 		</section>
 
 	</div>
 	<aside id="sidebar" class="report">
-		<div class="counter"><span class="count count-vote-<?= $report->id ?>"><?= $report->votes_count ?></span>
-			<? _e('persona (tú) quiere que alguien la re:medie'); ?>
-		</div>
+    		<div class="counter">
+            	<span class="count count-vote-<?= $report->id ?>"><?= $report->votes_count ?></span>
+				<? _e('persona (tú) quiere que alguien la re:medie'); ?>
+                <div class="wrap-fix">
+            		<? if ($logged_in && $report->is_voted($the_user->id)) : ?>
+					<div class="fix_done">¡Hecho!</div>
+					<? endif; ?>
+                </div>
+			</div>
 	</aside>
 </div>

@@ -27,10 +27,8 @@
 		<section class="tabs">
 			<ul class="tabs_items">
 				<li><a href="#stats"><? _e('Estadísticas'); ?></a></li>
-				<li class="<?= (($page>1) ? 'ui-tabs-selected' : ''); ?>"><a href="#fixes"><? printf(_('Noticias re:mediadas por %s'), $user->name); ?></a></li>
-				<? if ($logged_in && $user->id==$the_user->id) : ?>
-				<li><a data-ajax="false" href="<?=site_url($this->router->reverseRoute('user-activity'));?>"><? _e('Actividad'); ?> <? if (count($the_user->unread_activity)) : ?> (<?= count($the_user->unread_activity); ?>)<? endif; ?></a></li>
-				<? endif; ?>
+				<li class="<?= (($page>1) ? 'ui-tabs-selected' : ''); ?>"><a href="#fixes"><? _e('Noticias reportadas'); ?></a></li>
+				<li><a data-ajax="false" href="<?=site_url($this->router->reverseRoute('user-activity'));?>"><? _e('Actividad'); ?> <? if (count($user->unread_activity)) : ?> (<?= count($the_user->unread_activity); ?>)<? endif; ?></a></li>
 			</ul>
 			<div id="stats">
 			    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -42,8 +40,9 @@
 						data.addColumn('string', 'Type');
 						data.addColumn('number', 'Count');
 						data.addRows([
-						  ['Reportes', <?= count($user->subreports); ?>],
-						  ['Re:medios', <?= count($user->fixes); ?>],
+						  ['Reportes', <?= count($user->fixes); ?>],
+						  ['Re:medios', <?= count($user->subreports); ?>],
+						  
 						]);
 						var options = { chartArea : {
 						               		width:250,
@@ -57,7 +56,7 @@
 					}
 					function fixes_by_sources() {
 						var data = google.visualization.arrayToDataTable([
-						  	['<? _e('Medios'); ?>', '<? _e('Re:medios'); ?>'],
+						  	['<? _e('Medios'); ?>', '<? _e('Reportes'); ?>'],
 						 	<? foreach ($fixes_by_sites as $site) :?>
 								[<?= "'". $site->site ."'";?>, <?=$site->fixes?>],
 							<? endforeach; ?>
@@ -106,25 +105,25 @@
 				    	<div class="chart" id="fix_vs_rep"></div>
 				    	<div class="explanation">
 				    		<? if (count($user->subreports)>0) : ?>
-				    			<h3 class="title"><?= round(count($user->fixes)/count($user->subreports),1); ?> <? _e('fixes por cada reporte'); ?></h3>
+				    			<h3 class="title"><?= round(count($user->fixes)/count($user->subreports),1); ?> <? _e('reportes por cada re:medio'); ?></h3>
 				    		<? else: ?>
-				    			<h3 class="title"><?= count($user->fixes); ?> <? _e('fixes por cada reporte'); ?></h3>
+				    			<h3 class="title"><?= count($user->fixes); ?> <? _e('re:medios por cada reporte'); ?></h3>
 				    		<? endif; ?>
-				    		<p class="hint"><? _e('¿Este usuario es más de ‘Reporte’ o de ‘Re:medio’? Este gráfico nos dice qué porcentaje de Re:medio ha hecho por cada reporte aportado.'); ?></p>
+				    		<p class="hint"><? _e('¿Este usuario es más de ‘reportes’ o de ‘re:medios’? Este gráfico nos dice qué porcentaje de correcciones y/o ampliaciones ha hecho por cada noticia reportada.'); ?></p>
 				    	</div>
 				    </div>
 				    <div class="chart_wrap clearfix">
 				    	<div class="chart" id="actions_by_month"></div>
 				    	<div class="explanation">
 				    		<h3 class="title"><? _e('Actividad por meses'); ?></h3>
-				    		<p class="hint"><? _e('Este gráfico nos muestra en qué momentos es más activo este usuario y haciendo el qué. Azul: reportes. Rojo: re:medios.'); ?></p>
+				    		<p class="hint"><? _e('Este gráfico nos muestra los momentos de mayor actividad. Azul: reportes. Rojo: re:medios.'); ?></p>
 				    	</div>
 				    </div>
 				    <div class="chart_wrap clearfix">
 				    	<div class="chart" id="fixes_by_sources"></div>
 				    	<div class="explanation">
 				    		<h3 class="title"><? _e('Reportes por medios'); ?></h3>
-				    		<p class="hint"><? _e('¿Qué medios, blogs, etc. son los que se benefician más de la edición de este usuario? Ordenados de mayor a menor.'); ?></p>
+				    		<p class="hint"><? _e('¿Qué medios son los que se benefician más? Ordenados de mayor a menor.'); ?></p>
 				    	</div>
 				    </div>
 				<? else : ?>
@@ -148,12 +147,12 @@
 						</div>
 						<h2 class="title"><a href="<?= site_url($this->router->reverseRoute('reports-view', array('slug' => $vote->report->slug))); ?>"><?=$vote->report->title;?></a></h2>
 						<div class="report_meta">
-							<p class="authorship">Enviado por <a href="<?= site_url($this->router->reverseRoute('user-profile', array('username' => $vote->report->user->username))); ?>"><?= $vote->report->user->name; ?></a> el <?= $vote->report->created_at->format('d/m/Y'); ?></p>
-							<p class="source">Fuente: <a href="<?= site_url($this->router->reverseRoute('source-profile', array('sitename' => $vote->report->site))); ?>"><?= $vote->report->site; ?></a></p>
+							<p class="authorship">Reportado por <a href="<?= site_url($this->router->reverseRoute('user-profile', array('username' => $vote->report->user->username))); ?>"><?= $vote->report->user->name; ?></a> el <?= $vote->report->created_at->format('d/m/Y'); ?></p>
+							<p class="source">Medio: <a href="<?= site_url($this->router->reverseRoute('source-profile', array('sitename' => $vote->report->site))); ?>"><?= $vote->report->site; ?></a></p>
 							<? if ($vote->report->has_subreport($user->id)) : ?>
-								<p class="action_type report"><?=$user->name;?> <? _e('reportó su propia mejora en esta noticia'); ?></p>
+								<p class="action_type report"><?=$user->name;?> <? _e('además añadió un re:medio'); ?></p>
 							<? elseif ($vote->report->user_id==$user->id) : ?>
-								<p class="action_type fix"><?=$user->name;?> <? _e('fue el primero en hacer fix en esta noticia'); ?></p>
+								<p class="action_type fix"><?=$user->name;?> <? _e('descubrió esta noticia'); ?></p>
 							<? endif; ?>
 						</div>
 					</article>
@@ -165,7 +164,7 @@
 			</div>
 
 		</section>
-		<p class="more-actions"><? _e('Ir a...'); ?> <a href="<?= site_url($this->router->reverseRoute('reports-create')); ?>"><? _e('Re:mediar una noticia ahora'); ?></a></p>
+		<p class="more-actions"><? _e('Ir a...'); ?> <a href="<?= site_url($this->router->reverseRoute('reports-create')); ?>"><? _e('Reportar una noticia'); ?></a></p>
 	</div>
 	<?php $this->load->view('includes/sidebar-user'); ?>
 </div>

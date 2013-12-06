@@ -19,8 +19,8 @@
 					<li class="name"><? _e('Comunidad'); ?></li>
 					<li><a href="http://remedia.la/usuario/registro"><? _e('Registro'); ?></a></li>
 					<li><a href="http://remedia.la/usuario/entrar"><? _e('Inicio de sesión'); ?></a></li>
-					<li><a href="<?= site_url($this->router->reverseRoute('user-profile', array('username' => $the_user->username))); ?>"><? _e('Mi perfil'); ?></a></li>
-					<li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('marcador')))); ?>"><? _e('Usa nuestro marcador'); ?></a></li>
+					<!--<li><a href="<?= site_url($this->router->reverseRoute('user-profile', array('username' => $the_user->username))); ?>"><? _e('Mi perfil'); ?></a></li>-->
+					<li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('marcador')))); ?>"><? _e('Marcador'); ?></a></li>
 					<li><a href="<?= site_url($this->router->reverseRoute('users')); ?>"><? _e('Top re:mediantes'); ?></a></li>
 					<li><a href="<?= site_url($this->router->reverseRoute('sources')); ?>"><? _e('Top medios'); ?></a></li>
 					<li><a href="http://blogremedia.wordpress.com"><? _e('Blog'); ?></a></li>
@@ -29,12 +29,11 @@
 				</ul>
 				<ul class="menu">
 					<li class="name">Ayuda</li>
-					<li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('que-es-remedia')))); ?>"><? _e('Qué es RE:media'); ?></a></li>
-					<li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('como-funciona')))); ?>"><? _e('Cómo funciona'); ?></a></li>
-					<li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('equipo')))); ?>"><? _e('Equipo'); ?></a></li>
+					<li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('como-usar')))); ?>"><? _e('Cómo usar RE:media'); ?></a></li>
 					<li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('faq')))); ?>"><? _e('FAQ'); ?></a></li>
+                    <li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('equipo')))); ?>"><? _e('Equipo'); ?></a></li>
 					<li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('contacto')))); ?>"><? _e('Contacto'); ?></a></li>
-					<!--<li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('aviso-legal')))); ?>"><? _e('Información legal'); ?></a></li>-->
+					<li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('aviso-legal')))); ?>"><? _e('Aviso legal'); ?></a></li>
 
 				</ul>
 			</nav>
@@ -47,6 +46,7 @@
 				<a href="http://nxtmdia.com"><img alt="Nxtmdia" src="<?= base_url('images/logos/logo-nxtmdia.jpg'); ?>"/></a>
 			</div>
 			<div class="cofin">
+            <a href="http://guegue.com" target="_blank"><img alt="GüeGüe Comunicaciones" src="<?= base_url('images/logos/logoguegue.png'); ?>"/></a>
 <!--
 				<h3 class="title"><? _e('Cofinanciadores destacados'); ?>:</h3>
 -->

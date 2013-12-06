@@ -6,7 +6,7 @@
 		<?php echo form_open($this->router->reverseRoute('reports-preview'), array('id' => 'form_report', 'class' => 'clearfix'), $hidden_fields) ?>
 			<? foreach ($report['type'] as $index => $type) : $count=$index+1;?>
 				<div class="report_data">
-					<p><label class="label"><? _e('Elige el tipo de reporte'); ?></label>
+					<p><label class="label"><? _e('Elige el tipo de re:medio'); ?></label>
 					<div class="wrap_types clearfix">
 					<? foreach ($reports_types_tree as $report_type) : ?>
 						<span class="wrap_type <? echo (($type==$report_type->id) ? 'active' : '');?>">
@@ -23,9 +23,9 @@
 							<input class="text" type="text" id="title_<?=$count;?>" name="title[]" value="<?=htmlspecialchars($report['title'][$index]);?>"  maxlength="120"/>
 							<span class="help">
 								<? if ($type==1) : ?>
-								<? _e('Esto es lo primero que verán el resto de usuarios, es importante titular bien: destaca en una frase la esencia de tu corrección.'); ?>
+								<? _e('Esto es lo primero que verán el resto de re:mediantes, es importante titular bien: destaca en una frase la esencia de tu corrección.'); ?>
 								<? else : ?>
-								<? _e('Esto es lo primero que verán el resto de usuarios, es importante titular bien: destaca en una frase la esencia de tu ampliación.'); ?>
+								<? _e('Esto es lo primero que verán el resto de re:mediantes, es importante titular bien: destaca en una frase la esencia de tu ampliación.'); ?>
 								<? endif ?>
 								<span class="charcount">120</span>
 							</span>
@@ -63,7 +63,7 @@
 
 						<div class="row wrap_type_info">
 
-							<label class="label" for="type_info"><? _e('Clasifica tu reporte'); ?> <span class="tip"><? _e('Ayuda a la comunidad a comprender rápidamente cual es el problema en esta noticia'); ?></span></label>
+							<label class="label" for="type_info"><? _e('Clasifica tu re:medio'); ?> <span class="tip"><? _e('Ayuda a la comunidad a comprender rápidamente cual es el problema en esta noticia'); ?></span></label>
 								<p class="<? echo (($report['type_info'][$index]==0) ? 'checked' : ''); ?> option clearfix"><input type="radio" name="type_info[<?=$count-1;?>]" value="0" id="type0-<?=$count-1;?>" checked /><label for="type0-<?=$count-1;?>"><? _e('Ninguna'); ?></label></p>
 							<? foreach ($selected_type->childrens as $children) : ?>
 								<p class="<? echo (($report['type_info'][$index]==$children->id) ? 'checked' : ''); ?> option clearfix"><input type="radio" name="type_info[<?=$count-1;?>]" id="type<?=$children->id; ?>-<?=$count-1;?>" value="<?=$children->id; ?>" <? echo (($report['type_info'][$index]==$children->id) ? 'checked' : ''); ?> /><label for="type<?=$children->id; ?>-<?=$count-1;?>"><?=$children->type;?></label></p>

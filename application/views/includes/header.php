@@ -4,7 +4,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <link href='http://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>
     <meta name="viewport" content="width=1024" />
-	<title><?=$page_title?> - RE:media</title>
+	<title>RE:media - <?=$page_title?></title>
     <link rel="shortcut icon" href="<?php echo base_url(); ?>/images/favicon.png">
     <meta name="description" content="<?= isset($description) ? $description : ''; ?>" />
     <meta name="keywords" content="" />
@@ -26,8 +26,8 @@
             <p class="main_title"><a href="<?php echo base_url(); ?>" title="<? _e('RE:media, mejora las noticias'); ?>"><img src="<?= base_url('images/logo-remedia.png'); ?>" alt="<? _e('RE:media, mejora las noticias'); ?>" title="<? _e('RE:media, mejora las noticias'); ?>"/></a></p>
             <nav class="top-menu">
                 <ul class="menu clearfix">
-                    <li><? _e('arrastra el botón'); ?> <a href="javascript:(function()%7B%20%20_my_script%3Ddocument.createElement(%27SCRIPT%27)%3B%20%20_my_script.type%3D%27text/javascript%27%3B%20%20_my_script.src%3D%27http://remedia.la/js/bookmarklet.js%27%3B%20%20document.getElementsByTagName(%27head%27)%5B0%5D.appendChild(_my_script)%3B%7D)()%3B" class="bookmarklet"><? _e('Enviar a RE:media'); ?></a> <? _e('a tu navegador'); ?> [<a href="<?= site_url($this->router->reverseRoute('statics', array('page' => 'marcador'))); ?>"><? _e('+ info'); ?></a>]</li>
-                    <li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('que-es-remedia')))); ?>"><? _e('¿Qué es RE:media?'); ?></a></li>
+                    <li><? _e('arrastra el botón'); ?> <a href="javascript:(function()%7B%20%20_my_script%3Ddocument.createElement(%27SCRIPT%27)%3B%20%20_my_script.type%3D%27text/javascript%27%3B%20%20_my_script.src%3D%27http://remedia.la/js/bookmarklet.js%27%3B%20%20document.getElementsByTagName(%27head%27)%5B0%5D.appendChild(_my_script)%3B%7D)()%3B" class="bookmarklet"><? _e('RE:portar'); ?></a> <? _e('a tu navegador'); ?> [<a href="<?= site_url($this->router->reverseRoute('statics', array('page' => 'marcador'))); ?>"><? _e('+ info'); ?></a>]</li>
+                    <li><a href="<?= site_url($this->router->reverseRoute('statics', array('page' =>  _('como-usar')))); ?>"><? _e('Cómo usar RE:media'); ?></a></li>
                 </ul>
             </nav>
             <? if (!$logged_in) : ?>
@@ -47,8 +47,8 @@
                             <div class="user_data">
                                 <h2 class="name"><?= $the_user->name; ?></h2>
                                 <p class="counters">
-                                    <span class="fix_count"><?= count($the_user->fixes); ?></span> <? _e('fixes'); ?>
-                                    <span class="report_count"><?= count($the_user->subreports); ?></span> <? _e('reportes'); ?>
+                                    <span class="fix_count"><?= count($the_user->fixes); ?></span> <? _e('reportes'); ?>
+                                    <span class="report_count"><?= count($the_user->subreports); ?></span> <? _e('re:medios'); ?>
                                 </p>
                                 <?= karma_graphic($the_user->karma, false); ?>
                             </div>

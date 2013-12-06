@@ -11,10 +11,10 @@
 			<? if ($voted) : ?>
 			<h3><? _e('¡Ya has reportado esta noticia!'); ?></h3>
 			<? else :?>
-			<h3><? _e('Esta noticia ya está en RE:media'); ?>, <strong><? _e('¿quieres reportarla?'); ?></strong></h3>
+			<h3><? _e('Esta noticia ya está en RE:media'); ?>,</h3> <h3><strong><? _e('¿quieres añadir tu reporte?'); ?></strong></h3>
 			<? endif; ?>
 		<? else : ?>
-			<h3><? _e('Esta noticia no está en RE:media'); ?>, <strong><? _e('¿quieres descubrirla reportándola por primera vez?'); ?></strong></h3>
+			<h3><? _e('Esta noticia no está en RE:media'); ?>,</h3> <h3><strong><? _e('¿quieres descubrirla'); ?></strong></h3><h3><strong><? _e('y reportarla por primera vez?'); ?></strong></h3>
 		<? endif; ?>
 		<? if (isset($report) && $logged_in) : ?>
 			<?php echo form_open(site_url(array('services/fix_vote',$report->id)), array('target' => '_blank', 'class' => 'fix_vote clearfix')) ?>
@@ -22,14 +22,14 @@
 			<?php echo form_open($this->router->reverseRoute('reports-create'), array('target' => '_blank', 'class' => 'fix_new', 'method' => 'get')) ?>
 		<? endif; ?>
 			<input type="hidden" value="<?= $url ?>" name="url" />
-			<input class="submit button <?= $voted ? 'voted' : ''; ?>" type="submit" name="submit" value="re:mediar" />
+			<input class="submit button <?= $voted ? 'voted' : ''; ?>" type="submit" name="submit" value="Reportar" />
 			<? if (isset($votes)) : ?>
 				<span class="votes"><i></i><u></u><?=$votes?></span>
 			<? endif; ?>
 		</form>
 		<? if (isset($votes) && $votes>0) : ?>
-			<p class="actions"><a class="view" href="<?= site_url($this->router->reverseRoute('reports-view', array('slug' => $report->slug))); ?>" target="_blank"><? _e('ver la noticia en remedia'); ?></a>
-			<a class="report" target="blank" href="<?= site_url($this->router->reverseRoute('reports-send' , array('id' => $report->id))); ?>"><? _e('Re:médiala tú mismo'); ?></a></p>
+			<p class="actions"><a class="view" href="<?= site_url($this->router->reverseRoute('reports-view', array('slug' => $report->slug))); ?>" target="_blank"><? _e('Ver la noticia en RE:media'); ?></a>
+			<a class="report" target="blank" href="<?= site_url($this->router->reverseRoute('reports-send' , array('id' => $report->id))); ?>"><? _e('Re:mediarla'); ?></a></p>
 		<? endif; ?>
 	</div>
 </body>

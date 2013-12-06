@@ -7,7 +7,7 @@
 		<? $hidden_fields = array('report_id' => $report->id, 'report_url' => $report->url, 'report_title' => $report->title, 'site' => $report->site); ?>
 		<?php echo form_open($this->router->reverseRoute('reports-preview'), array('id' => 'form_report', 'class' => 'clearfix'), $hidden_fields) ?>
 			<div class="report_data">
-				<p><label class="label"><? _e('Elige el tipo de reporte'); ?></label>
+				<p><label class="label"><? _e('Elige el tipo de re:medio'); ?></label>
 				<div class="wrap_types clearfix">
 				<? foreach ($reports_types_tree as $report_type) : ?>
 					<span class="wrap_type">
@@ -33,7 +33,7 @@
 			<? elseif ($report->votes_count==1) :?>
 			<? _e('persona quiere que alguien la re:medie'); ?>
 			<? else : ?>
-			<? _e('personas  quieren que alguien la re:medie'); ?>
+			<? _e('personas quieren que alguien la re:medie'); ?>
 			<? endif; ?>
 		</div>
 	</aside>

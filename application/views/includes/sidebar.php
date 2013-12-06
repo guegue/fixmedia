@@ -6,8 +6,7 @@
 		<div class="fb-like" data-href="http://www.facebook.com/remedia.la" data-send="false" data-layout="button_count" data-width="150" data-show-faces="false"></div>
 	</section>
 	<section class="message">
-		<p><a href="http://www.remedia.la/estaticas/marcador">Usa nuestro marcador para re:mediar desde cualquier sitio</a></p>
-		<p><a href="http://www.remedia.la/estaticas/botones">Usa nuestro botón</a></p>
+		<p><a href="http://www.remedia.la/estaticas/marcador">Marcador para re:mediar una noticia desde cualquier sitio</a></p>
 	</section>
 
 	<? if (isset($sites_most_fixes)) :?>

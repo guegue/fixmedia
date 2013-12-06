@@ -1,16 +1,16 @@
 <div id="container" class="clearfix sending editing profile columns">
 	<div id="content">
-		<h1 class="title sep"><? _e('Editar perfil'); ?>			  				<a class="edit_profile_link" href="<?=site_url($this->router->reverseRoute('change_password'));?>"><? _e('Cambiar contraseña'); ?></a>
-</h1>
+		<h1 class="title sep"><? _e('Editar perfil'); ?>			  				
+        <a class="edit_profile_link" href="<?=site_url($this->router->reverseRoute('change_password'));?>"><? _e('Cambiar contraseña'); ?></a></h1>
 
 		<?php echo form_open($this->router->reverseRoute('user-save'), array('id' => 'form_report', 'class' => 'clearfix')) ?>
 			<div class="fields_wrap open">
 				<div class="row wrap_title">
-					<label class="label" for="name"><? _e('Nombre de usuario'); ?> <span class="tip"><? _e('Tu nombre de usuario no puede modificarse'); ?></span></label>
+					<label class="label" for="name"><? _e('Nombre de re:mediante'); ?> <span class="tip"><? _e('Tu nombre de re:mediante no puede modificarse'); ?></span></label>
 					<input class="text" type="text" id="" name="username" disabled="disabled" value="<?=htmlspecialchars($user->username);?>" />
 				</div>
 				<div class="row wrap_title">
-					<label class="label" for="name"><? _e('Nombre para mostrar'); ?> <span class="tip"><? _e('Será tu nombre público, puede ser tu nombre y apellidos, nick, etc.'); ?></span></label>
+					<label class="label" for="name"><? _e('Nombre para mostrar'); ?> <span class="tip"><? _e('Será tu nombre de re:mediante, puede ser tu nombre y apellidos, nick, etc.'); ?></span></label>
 					<input class="text" type="text" id="" name="name" value="<?=htmlspecialchars($user->name);?>" />
 					<?php echo form_error('name', '<span class="error">', '</span>'); ?>
 				</div>
@@ -33,7 +33,7 @@
 				</div>
 				<div class="row opt_checkbox">
 					<?php echo form_checkbox('allow_mention_twitter', '1', $user->allow_mention_twitter, 'id="allow_mention_twitter"');?>
-     				<label for="allow_mention_twitter"><? _e('Permitir que se me mencione en twitter al compartir mis envíos a RE:media'); ?></label>
+     				<label for="allow_mention_twitter"><? _e('Permitir que se me mencione en Twitter al compartir mis envíos a RE:media'); ?></label>
 				</div>
 				<div class="row wrap_title">
 					<label class="label" for="notifications"><? _e('Notificaciones'); ?> <span class="tip"><? _e('Selecciona cuándo quieres recibir notificaciones en tu correo electrónico'); ?></span></label>
@@ -42,11 +42,11 @@
 				</div>
 				<div class="row wrap_type_info">
 					<label class="label" for="notifications_types"><? _e('Tipos de notificaciones'); ?> <span class="tip"><? _e('Elige qué tipos de notificaciones quieres recibir en tu correo'); ?></span></label>
-					<p class="notification_option clearfix"><input type="checkbox" id="fix" name="notifications_types[FIX]"  value="1"  <?= ($ntypes['FIX']) ? 'checked' : '' ?> /><label for="fix"><? _e('Cuando alguien hace FIX a una noticia enviada por mí'); ?></label></p>
-					<p class="notification_option clearfix"><input type="checkbox" id="report" name="notifications_types[REPORT]"  value="1"  <?= ($ntypes['REPORT']) ? 'checked' : '' ?>  /><label for="report"><? _e('Cuando alguien envía un REPORTE a una noticia enviada por mí<'); ?>/label></p>
-					<p class="notification_option clearfix"><input type="checkbox" id="vote" name="notifications_types[VOTE]"  value="1"  <?= ($ntypes['VOTE']) ? 'checked' : '' ?>  /><label for="vote"><? _e('Cuando alguien VALORA un reporte enviado por mí'); ?></label></p>
-					<p class="notification_option clearfix"><input type="checkbox" id="solved" name="notifications_types[SOLVED]"  value="1"  <?= ($ntypes['SOLVED']) ? 'checked' : '' ?>  /><label for="solved"><? _e('Cuando alguien dice que un reporte envíado por mí está CORREGIDO en la noticia'); ?></label></p>
-					<p class="notification_option clearfix"><input type="checkbox" id="comment" name="notifications_types[COMMENT]"  value="1"  <?= ($ntypes['COMMENT']) ? 'checked' : '' ?>  /><label for="comment"><? _e('Cuando alguien COMENTA un reporte enviado por mí'); ?></label></p>
+					<p class="notification_option clearfix"><input type="checkbox" id="fix" name="notifications_types[FIX]"  value="1"  <?= ($ntypes['FIX']) ? 'checked' : '' ?> /><label for="fix"><? _e('Cuando alguien añade su reporte a una noticia que yo reporté'); ?></label></p>
+					<p class="notification_option clearfix"><input type="checkbox" id="report" name="notifications_types[REPORT]"  value="1"  <?= ($ntypes['REPORT']) ? 'checked' : '' ?>  /><label for="report"><? _e('Cuando alguien envía un re:medio a una noticia que yo reporté'); ?></label></p>
+					<p class="notification_option clearfix"><input type="checkbox" id="vote" name="notifications_types[VOTE]"  value="1"  <?= ($ntypes['VOTE']) ? 'checked' : '' ?>  /><label for="vote"><? _e('Cuando alguien VALORA un re:medio que envié yo'); ?></label></p>
+					<p class="notification_option clearfix"><input type="checkbox" id="solved" name="notifications_types[SOLVED]"  value="1"  <?= ($ntypes['SOLVED']) ? 'checked' : '' ?>  /><label for="solved"><? _e('Cuando alguien dice que un re:medio envíado por mí está CORREGIDO en la noticia'); ?></label></p>
+					<p class="notification_option clearfix"><input type="checkbox" id="comment" name="notifications_types[COMMENT]"  value="1"  <?= ($ntypes['COMMENT']) ? 'checked' : '' ?>  /><label for="comment"><? _e('Cuando alguien COMENTA un re:medio que yo propuse'); ?></label></p>
 				</div>
 			</div>
 			<input type="submit" class="button submit" name="submit" value="<? _e('Guardar los cambios'); ?>" />

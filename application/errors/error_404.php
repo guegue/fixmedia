@@ -54,7 +54,7 @@
 </head>
 <body>
 	<div class="error_wrapper">
-		<p><img class="logo" src="http://www.remedia.la/images/errors/error_logo_remedia.png" alt="Remedia.la" title="Remedia.la" /></p>
+		<p><img class="logo" src="http://www.remedia.la/images/errors/error_logo_remedia.png" alt="remedia.la" title="RE:media" /></p>
 		<p><img class="logo" src="http://www.remedia.la/images/errors/404.png" alt="No se puede encontrar la página que buscas" title="No se puede encontrar la página que buscas" /></p>
 		<a href="http://remedia.la" class="button">Vuelve a RE:media</a>
 	</div>

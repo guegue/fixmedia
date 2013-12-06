@@ -29,7 +29,7 @@ class Services extends MY_Controller {
             redirect('auth', 'refresh');
          endif;
          $data['result']['valid'] = false;
-         if (!$this->logged_in) { $data['result']['error'] =  _("Usuario no está logueado o no se corresponde"); }
+         if (!$this->logged_in) { $data['result']['error'] =  _("Re:mediante sin loguearse o no se corresponde"); }
          try { $report = Report::find($report_id); } catch (\ActiveRecord\RecordNotFound $e) {
             $data['result']['error'] =  _("Envío no válido");
          }
@@ -58,9 +58,9 @@ class Services extends MY_Controller {
       public function report_vote($user_id, $report_data_id, $value) {
          $data['result']['valid'] = false;
          try { $user = User::find($user_id); } catch (\ActiveRecord\RecordNotFound $e) {
-            $data['result']['error'] =  _("Usuario no válido");
+            $data['result']['error'] =  _("No encontramos ese nombre de re:mediante");
          }
-         if (!$this->logged_in || $user_id!=$this->the_user->id) { $data['result']['error'] =  _("Usuario no está logueado o no se corresponde"); }
+         if (!$this->logged_in || $user_id!=$this->the_user->id) { $data['result']['error'] =  _("Re:mediante sin loguearse o no se corresponde"); }
          try { $report = Reports_data::find($report_data_id); } catch (\ActiveRecord\RecordNotFound $e) {
             $data['result']['error'] =  _("Envío no válido");
          }
@@ -98,9 +98,9 @@ class Services extends MY_Controller {
       public function report_solved($user_id, $report_data_id) {
          $data['result']['valid'] = false;
          try { $user = User::find($user_id); } catch (\ActiveRecord\RecordNotFound $e) {
-            $data['result']['error'] =  _("Usuario no válido");
+            $data['result']['error'] =  _("No encontramos ese nombre de re:mediante");
          }
-         if (!$this->logged_in || $user_id!=$this->the_user->id) { $data['result']['error'] =  _("Usuario no está logueado o no se corresponde"); }
+         if (!$this->logged_in || $user_id!=$this->the_user->id) { $data['result']['error'] =  _("Re:mediante sin loguearse o no se corresponde"); }
          try { $report = Reports_data::find($report_data_id); } catch (\ActiveRecord\RecordNotFound $e) {
             $data['result']['error'] =  _("Envío no válido");
          }
@@ -131,11 +131,11 @@ class Services extends MY_Controller {
             $report = Report::find_by_slug($slug);
             if ($report) :
                if ($fix) :
-                  $data['title'] =  _("¡Acabas de re:mediar esta noticia!");
+                  $data['title'] =  _("¡Acabas de reportar esta noticia!");
                   $data['content'] =  _("Compartelo con tu gente");
                else :
                   $data['title'] =  _("¡Compártela!");
-                  $data['content'] =  _("Cuanta más gente conozca esta noticia y haga FIX en ella, más posibilidades de arreglarla entre todos");
+                  $data['content'] =  _("Cuanta más gente conozca esta noticia y añada su reporte, más posibilidades tenemos de re:mediarla");
                endif;
                $data['report'] = $report;
                $data['url'] = site_url($this->router->reverseRoute('reports-view' , array('slug' => $slug)));
@@ -283,10 +283,10 @@ class Services extends MY_Controller {
       public function next_unvoted_report() {
          $data['result']['valid'] = false;
          if (!$this->logged_in) {
-            $data['result']['error'] =  _("Usuario no está logueado o no se corresponde");
+            $data['result']['error'] =  _("Re:mediante sin loguearse o no se corresponde");
          } else {
             try { $user = User::find($this->the_user->id); } catch (\ActiveRecord\RecordNotFound $e) {
-               $data['result']['error'] =  _("Usuario no válido");
+               $data['result']['error'] =  _("No encontramos ese nombre de re:mediante");
             }
             $report = $user->unvoted_reports();
             if (!count($report)) {

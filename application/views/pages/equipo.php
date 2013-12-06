@@ -1,32 +1,33 @@
 <div id="container" class="columns static clearfix">
 	<div id="content">
 		<h1 class="title">Equipo</h1>
-		<p class="sub_title sep">RE:media es un proyecto pensado y desarrollado por el equipo de <a href="http://nxtmdia.com">Nxtmdia</a>, formado por:</p>
-		<h2>Daniel Aguilar</h2>
-		<p>Tecnología. En RE:media ha sido el responsable de todo el proceso de programación (¡desde 0!) y maquetación. Por si fuera poco no le ha faltado trabajo en otras áreas como SysAdmin.</p>
-		<h2>Rubén Illescas</h2>
-		<p>Diseño. En RE:media ha sido el pincel que da sentido visual a todo el proyecto. Desde el imagotipo a los colores, distribución y soluciones a cualquier problema de diseño. Fue el primero en ver literalmente RE:media (en su cerebro, claro).</p>
-		<h2>José A. Gelado</h2>
-		<p>Coordinación. En RE:media José se ha encargado de mantener el flujo de trabajo al igual que viene haciendo en Nxtmdia. Flexible y ágil, como nuestra forma de trabajar.
-		<h2>Nuria López</h2>
-		<p>Periodismo. En RE:media Nuria, que ejerce como editora en Bottup.com, ha aportado su conocimiento en edición periodística para diseñar algunas partes críticas del proceso-core de la herramienta, como el formulario de reporte.</p>
-		<h2>Olmo Gálvez</h2>
-		<p>Commons Marketing. En RE:media Olmo ha puesto en práctica su propia teoría y nos ha regalado la posibilidad de ser coherentes con la filosofía del proyecto en algo que salpica tanto como el marketing. La comunidad crece con sus semillas.</p>
-		<h2>Pau Llop</h2>
-		<p class="sep">Producto. En RE:media Pau ha ideado y prototipado, y ha tratado de coordinar esfuerzos para llegar, al menos, a la primera versión pública de RE:media. Sin esos esfuerzos ejercidos por los miembros señalados arriba, aún estaría atascado con el nombre.</p>
+		<p class="sub_title sep">RE:media es una iniciativa de <a href="http://www.guegue.com/" target="_blank">GüeGüe Comunicaciones</a>, concretamente de: <p>
+                       
+		<h2>Javier Wilson</h2>
+       <p><a href="https://twitter.com/javierwv" class="twitter-follow-button" data-show-count="false" data-lang="es"><? _e('Seguir a '); ?>@javierwv</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p>
+		<p>Código. Se ha ocupado de instalar la plataforma y estar en contacto con la gente de Fixmedia y Nxtmedia para resolver los problemas técnicos que se han ido presentando.</p>
+        <p>&nbsp;</p>
+        <h2>Ruddy Mora</h2>
+		<p>Código. También se ha ocupado de la programación, cuando las cosas se pusiron complicadas.</p>
+        <p>&nbsp;</p>
+		<h2>Ángel Soto</h2>
+        <p><a href="https://twitter.com/chacuatol" class="twitter-follow-button" data-show-count="false" data-lang="es"><? _e('Seguir a '); ?>@chacuatol</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p>
+		<p>Diseño. El artista se ha encargado del logotipo de la cápsula, los colores, tipos de letras y demas <em>cosas bonitas</em>.</p>
 		<p>&nbsp;</p>
-		<p>Aunque (por desgracia) no forma parte del equipo Nxtmdia, merece mención especial:</p>
-
-		<p><strong>Álvaro Ortiz</strong>. Experiencia por amor al arte. En RE:media Álvaro nos ha regalado pragmáticos consejos, tiempo para comidas y largos debates y hasta algún boceto listo para ser diseñado y maquetado (y listo para cambiar de raíz algunos conceptos del proyecto). Sin él RE:media existiría igual. Pero peor.</p>
-
-		<p><strong>Pablo Martín Muñoz</strong>, por su colaboración tecnológica en las fases iniciales del proyecto.</p>
-
-		<p><a href="http://nxtmdia.com/">Nxtmdia</a> es una empresa <a href="http://nxtmdia.com/social/">social</a> que financia sus proyectos non-profit como <a href="http://bottup.com">Bottup.com</a> y en parte Remedia.la a través de los ingresos que les proporcionan sus trabajos con terceros.</p>
-
-		<p>A las claras: que alquilamos nuestro talento y conocimiento. Si crees que te pueden ser útiles, cerremos el círculo: contratándonos favoreces la existencia de proyectos como estos (y otros muchos de la misma cuerda que nos rondan). <a href="http://nxtmdia.com/contacta/">Aquí nos tienes</a>.</p>
-
-		<p class="nav">Ir a... ‘<a href="<?= site_url($this->router->reverseRoute('statics', array('page' => 'cofinanciadores'))); ?>">Cofinanciadores</a>’ o a la ‘<a href="<?= site_url($this->router->reverseRoute('statics', array('page' => 'como-funciona'))); ?>">FAQ</a>’</p>
-
+        <h2>Víctor J. Valbuena</h2>
+        <p><a href="https://twitter.com/0vjv0" class="twitter-follow-button" data-show-count="false" data-lang="es"><? _e('Seguir a '); ?>@0vjv0</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p>
+		<p>Periodismo. Aportó la parte filosófica al proyecto, repensando los criterios de corrección de las noticias, además de velar por la usabilidad de la plataforma. También publica (muy de vez en cuando) posts sobre el avance de RE:media en <a href="http://blogremedia.wordpress.com" target="_blank">este blog</a>.</p>
+		
+        <p>&nbsp;</p>
+        <p>Merecen una mención especial las compañeras de <a href="http://aulapropia.blogspot.com" target="_blank">Aula Propia</a>, colectivo feminista nicaragüese que nos apoyó en el debate y reflexión sobre los criterios de corrección de noticias con lenguage sexista.</p>
+        
+        <p>&nbsp;</p>
+		<p>RE:media está inspirado en un proyecto muy similar, desarrollado en España, llamado <a href="http://fixmedia.org" target="_blank">Fixmedia</a>, cuyo equipo nos ha apoyado desde la distancia.</p>
+        <p>Reutilizamos el software desarrollado por <a href="http://nxtmdia.com/" target="_blank">Nxtmedia</a>, liberado a la comunidad de software libre (<a href="https://github.com/dacmail/fixmedia" target="_blank">puedes verlo y descargarlo en GitHub)</a>.</p>
+        
 	</div>
 	<?php $this->load->view('includes/sidebar-static'); ?>
 </div>

@@ -3,7 +3,7 @@
 	<div id="content">
 		<? $data['report'] = $report_sent; ?>
 		<?php $this->load->view('includes/report-info',$data); ?>
-		<h2 class="action_title"><strong><? _e('Este es el reporte que vas a publicar'); ?></strong> <? _e('Así es como se verá si lo envías'); ?></h2>
+		<h2 class="action_title"><strong><? _e('Este es el re:medio que vas a publicar'); ?></strong> <? _e('Así es como se verá si lo envías'); ?></h2>
 
 		<? $count=1; foreach ($report['type_info'] as $index => $type) :  ?>
 			<div class="subreport">
@@ -13,7 +13,7 @@
 					</span>
 					<div class="subreport_info">
 						<h3 class="subreport_title"><?=$report['title'][$index]; ?></h3>
-						<p class="authorship"><? _e('Enviado por'); ?> <?= $the_user->name; ?> <? _e('el'); ?> <?= date('d/m/Y'); ?></p>
+						<p class="authorship"><? _e('Reportado por'); ?> <?= $the_user->name; ?> <? _e('el'); ?> <?= date('d/m/Y'); ?></p>
 						<? if ($types[$index]->parent_type) : ?>
 							<p class="clearfix subreport_types type_<?= preg_replace('/[^a-z0-9]+/i','-',strtolower($types[$index]->parent_type->type));?>">
 								<span class="type"><?=$types[$index]->parent_type->type ;?></span>,
@@ -55,7 +55,7 @@
 
 		<?php echo form_open($this->router->reverseRoute('reports-save'), '') ?>
 			<? echo $hidden_fields; ?>
-			<input type="submit" name="submit" class="button submit" value="<? _e('Enviar reporte'); ?>" />
+			<input type="submit" name="submit" class="button submit" value="<? _e('Enviar re:medio'); ?>" />
 		<? echo form_close(); ?>
 	</div>
 

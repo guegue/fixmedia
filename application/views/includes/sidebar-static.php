@@ -7,7 +7,7 @@
 	</section>
 	<section class="message">
 		<p><a href="http://www.remedia.la/estaticas/marcador">Usa nuestro marcador para re:mediar desde cualquier sitio</a></p>
-		<p><a href="http://www.remedia.la/estaticas/botones">Usa nuestro botón</a></p>
+	<!--	<p><a href="http://www.remedia.la/estaticas/botones">Usa nuestro botón</a></p>-->
 	</section>
 	<? if (isset($sites_most_fixes)) :?>
 	<section class="block ranking">
